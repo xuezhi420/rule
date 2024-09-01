@@ -102,7 +102,7 @@
       { "rule_set": [ "streaming" ], "outbound": "📺 国际媒体" },
       { "rule_set": [ "proxy" ], "outbound": "🔰 节点选择" },
       { "rule_set": [ "cn" ], "outbound": "DIRECT" },
-      { "rule_set": [ "privateip" ], "outbound": "DIRECT", "skip_resolve": true },
+      { "rule_set": [ "privateip" ], "outbound": "DIRECT" },
       { "rule_set": [ "cnip" ], "outbound": "DIRECT" }
     ],
     "rule_set": [
