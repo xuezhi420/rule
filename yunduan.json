@@ -23,7 +23,7 @@
       {"clash_mode": "direct", "server": "localDns"},
       {"clash_mode": "global", "server": "proxyDns"},
       {"rule_set": "cn", "server": "localDns"},
-      {"query_type": ["A", "AAAA"], "rule_set": "geosite-geolocation-!cn", "server": "fakeip"},
+      {"query_type": ["A", "AAAA"], "rule_set": "proxy", "server": "fakeip"},
       {"rule_set": "proxy", "server": "proxyDns"},
       {"query_type": ["A", "AAAA"], "server": "fakeip"}
     ],
