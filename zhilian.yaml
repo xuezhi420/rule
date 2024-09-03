@@ -1,0 +1,8 @@
+
+
+payload:
+  - DOMAIN-SUFFIX,sciencedirect.com
+  - DOMAIN-SUFFIX,editorialmanager.com
+  - DOMAIN-SUFFIX,webofscience.com
+  - DOMAIN-SUFFIX,webofknowledge.com
+  - DOMAIN,access.clarivate.com
