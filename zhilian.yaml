@@ -4,7 +4,7 @@ payload:
   - DOMAIN-SUFFIX,editorialmanager.com
   - DOMAIN-SUFFIX,webofscience.com
   - DOMAIN-SUFFIX,webofknowledge.com
-  - DOMAIN,access.clarivate.com
+  - DOMAIN-SUFFIX,access.clarivate.com
 #onedrive
   - DOMAIN-SUFFIX,livefilestore.com
   - DOMAIN-SUFFIX,oneclient.sfx.ms
