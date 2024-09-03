@@ -1,5 +1,4 @@
-
-
+#自用直连规则
 payload:
   - DOMAIN-SUFFIX,sciencedirect.com
   - DOMAIN-SUFFIX,editorialmanager.com
