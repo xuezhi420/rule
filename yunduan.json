@@ -3,14 +3,6 @@
     "level": "info",
     "timestamp": true
   },
-  "experimental": {
-    "clash_api": {
-      "external_controller": "0.0.0.0:9090",
-      "external_ui": "ui",
-      "secret": "",
-      "default_mode": "rule"
-      }
-    },
   "dns": {
     "fakeip": {"enabled": true, "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"},
     "servers": [
