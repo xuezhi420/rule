@@ -26,6 +26,7 @@
     },
     "final": "localDns",
     "independent_cache": true,
+    "reverse_mapping": true,
     "strategy": "prefer_ipv4"
   },
 
