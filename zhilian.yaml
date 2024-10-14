@@ -5,6 +5,7 @@ payload:
   - DOMAIN-SUFFIX,webofscience.com
   - DOMAIN-SUFFIX,webofknowledge.com
   - DOMAIN-SUFFIX,access.clarivate.com
+  - DOMAIN-SUFFIX,pdf.sciencedirectassets.com
 #onedrive
   - DOMAIN-SUFFIX,livefilestore.com
   - DOMAIN-SUFFIX,oneclient.sfx.ms
