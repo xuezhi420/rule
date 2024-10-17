@@ -7,6 +7,8 @@ payload:
   - DOMAIN-SUFFIX,access.clarivate.com
   - DOMAIN-SUFFIX,pdf.sciencedirectassets.com
   - DOMAIN-SUFFIX,mjl.clarivate.com
+  - DOMAIN-SUFFIX,jcr.clarivate.com
+  - DOMAIN-SUFFIX,cdn.digital-experience.clarivate.io
 #onedrive
   - DOMAIN-SUFFIX,livefilestore.com
   - DOMAIN-SUFFIX,oneclient.sfx.ms
