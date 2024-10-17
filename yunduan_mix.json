@@ -6,7 +6,7 @@
   "dns": {
     "servers": [
       {"tag": "proxyDns", "address": "tls://8.8.8.8", "address_resolver": "localDns", "address_strategy": "prefer_ipv4", "detour": "🚀 节点选择"},
-      {"tag": "localDns", "address": "223.5.5.5", "detour": "🎯 全球直连"},
+      {"tag": "localDns", "address": "local"},
       {"tag": "fakeip", "address": "fakeip"},
       {"tag": "block", "address": "rcode://success"}
     ],
