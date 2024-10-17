@@ -16,7 +16,8 @@
       {"clash_mode": "global", "server": "proxyDns"},
       {"rule_set": "geosite-cn", "server": "localDns"},
       {"query_type": ["A", "AAAA"], "rule_set": "proxy", "server": "fakeip"},
-      {"rule_set": "proxy", "server": "proxyDns"}
+      {"rule_set": "proxy", "server": "proxyDns"},
+      {"query_type": ["A", "AAAA"], "server": "fakeip"}
     ],
     "fakeip": {
       "enabled": true,
