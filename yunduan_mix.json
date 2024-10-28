@@ -32,29 +32,21 @@
   "inbounds": [
     {
       "type": "tun",
-      "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
-      "gso": false,
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
       "auto_route": true,
       "strict_route": true,
-      "endpoint_independent_nat": false,
-      "stack": "mixed",
-      "exclude_package": ["com.android.captiveportallogin"],
-      "platform": {
-        "http_proxy": {
-          "enabled": true,
-          "server": "127.0.0.1",
-          "server_port": 7890
-        }
-      },
       "sniff": true,
-      "sniff_override_destination": false
+      "stack": "mixed"
     },
     {
       "type": "mixed",
-      "listen": "::",
-      "listen_port": 7890,
+      "listen": "0.0.0.0",
+      "listen_port": 2080,
       "sniff": true,
-      "sniff_override_destination": false
+      "users": []
     }
   ],
 
