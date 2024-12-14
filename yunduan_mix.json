@@ -27,13 +27,17 @@
     "reverse_mapping": true,
     "strategy": "prefer_ipv4"
   },
-  "inbounds": [
+    "inbounds": [
     {
       "type": "tun",
       "address": [
         "172.19.0.1/30",
         "fdfe:dcba:9876::1/126"
-      ],
+      ],      
+      "mtu": 9000,
+      "auto_route": true,
+      "sniff": true,
+      "stack": "system",
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -41,21 +45,15 @@
           "server_port": 2080
         }
       }
-    },      
-      "auto_route": true,
-      "strict_route": true,
-      "sniff": true,
-      "stack": "system"
     },
     {
       "type": "mixed",
-      "listen": "0.0.0.0",
+      "listen": "127.0.0.1",
       "listen_port": 2080,
       "sniff": true,
       "users": []
     }
-  ],
-
+  ],  
   
   "outbounds": [
     { "tag": "🚀 节点选择", "type": "selector", "outbounds": ["🇭🇰 香港自动", "🇹🇼 台湾自动", "🇸🇬 狮城自动", "🇯🇵 日本自动", "🇺🇲 美国自动", "✈️ 手动切换"] },
