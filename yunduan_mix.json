@@ -14,7 +14,7 @@
       {"outbound": "any", "server": "localDns", "disable_cache": true},
       {"clash_mode": "direct", "server": "localDns"},
       {"clash_mode": "global", "server": "proxyDns"},
-      {"rule_set": "geosite-cn", "action": "route", "server": "localDns"},
+      {"rule_set": "geosite-cn", "server": "localDns"},
       {"query_type": ["A", "AAAA"], "server": "fakeip"}
     ],
     "fakeip": {
