@@ -73,15 +73,15 @@
     { "tag": "🇸🇬 狮城自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇸🇬|新加坡|SG|SINGAPORE|Singapore"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 20 },
     { "tag": "🐟 漏网之鱼", "type": "selector", "outbounds": ["🚀 节点选择", "🎯 全球直连", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇯🇵 日本自动", "🇺🇲 美国自动", "✈️ 手动切换"] },
     { "tag": "GLOBAL", "type": "selector", "outbounds": ["🎯 全球直连", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇯🇵 日本自动", "🇺🇲 美国自动", "✈️ 手动切换"] },
-    { "tag": "🎯 全球直连", "type": "direct" },
-    { "tag": "dns-out", "type": "dns" }
+    { "tag": "🎯 全球直连", "type": "direct" }
   ],
   
   "route": {
         "auto_detect_interface": true,
         "final": "🐟 漏网之鱼",
     "rules": [
-      { "type": "logical", "mode": "or", "rules": [{ "port": 53 }, { "protocol": "dns" }], "outbound": "dns-out" },
+      {"action": "sniff"},
+      {"protocol": "dns", "action": "hijack-dns"},
       { "clash_mode": "direct", "outbound": "🎯 全球直连" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "ip_is_private": true, "outbound": "🎯 全球直连" },
