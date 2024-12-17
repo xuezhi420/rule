@@ -88,7 +88,8 @@
         "final": "🐟 漏网之鱼",
     "rules": [
       {"action": "sniff"},
-      {"protocol": "dns", "action": "hijack-dns"},      { "clash_mode": "direct", "outbound": "🎯 全球直连" },
+      {"protocol": "dns", "action": "hijack-dns"},      
+      { "clash_mode": "direct", "outbound": "🎯 全球直连" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "ip_is_private": true, "outbound": "🎯 全球直连" },
       { "rule_set": ["privateip", "private"], "outbound": "🎯 全球直连" },
