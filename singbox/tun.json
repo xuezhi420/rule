@@ -19,22 +19,24 @@
     }
   },
   
-  "dns": {
-    "servers": [
-      {"tag": "proxyDns", "address": "https://dns.google/dns-query", "address_resolver": "defaultDns", "address_strategy": "ipv4_only", "detour": "🚀 节点选择"},
-      {"tag": "localDns", "address": "223.5.5.5", "address_resolver": "defaultDns", "address_strategy": "ipv4_only", "detour": "🎯 全球直连"},
-      {"tag": "defaultDns", "address": "223.5.5.5", "address_strategy": "ipv4_only", "detour": "🎯 全球直连"}
-    ],
-    "rules": [
-      { "outbound": "any", "server": "defaultDns", "disable_cache": true },
-      { "clash_mode": "direct", "server": "localDns" },
-      { "clash_mode": "global", "server": "proxyDns" },
-      { "rule_set": "geosite-cn", "server": "localDns" },
-      { "rule_set": "geosite-geolocation-!cn", "server": "proxyDns" }
-    ],
-    "final": "localDns",
-    "strategy": "ipv4_only"
-  },
+  "dns": 
+ {
+   "servers": 
+   [
+     {"tag": "dns_direct", "address": "223.5.5.5", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🎯 全球直连"},
+     {"tag": "dns_proxy", "address": "tls://8.8.8.8", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🚀 节点选择"}
+   ],
+   "rules": 
+   [
+     {"outbound": "any", "server": "dns_direct", "disable_cache": true},
+     {"clash_mode": "Direct", "server": "dns_direct"},
+     {"clash_mode": "Global", "server": "dns_proxy"},
+     {"rule_set": "geosite-cn", "action": "route","server": "dns_direct"},
+     {"rule_set": "geosite-geolocation-!cn", "server": "dns_proxy"}
+   ],
+   "final": "dns_proxy",
+   "strategy": "ipv4_only"
+},
  "inbounds": [
     {
       "type": "tun",
@@ -78,16 +80,15 @@
     { "tag": "🇸🇬 狮城自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇸🇬|新加坡|SG|SINGAPORE|Singapore"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 20 },
     { "tag": "🐟 漏网之鱼", "type": "selector", "outbounds": ["🚀 节点选择", "🎯 全球直连", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇯🇵 日本自动", "🇺🇲 美国自动", "✈️ 手动切换"] },
     { "tag": "GLOBAL", "type": "selector", "outbounds": ["🎯 全球直连", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇯🇵 日本自动", "🇺🇲 美国自动", "✈️ 手动切换"] },
-    { "tag": "🎯 全球直连", "type": "direct" },
-    { "tag": "dns-out", "type": "dns" }
+    { "tag": "🎯 全球直连", "type": "direct" }
   ],
   
   "route": {
         "auto_detect_interface": true,
         "final": "🐟 漏网之鱼",
     "rules": [
-      { "type": "logical", "mode": "or", "rules": [{ "port": 53 }, { "protocol": "dns" }], "outbound": "dns-out" },
-      { "clash_mode": "direct", "outbound": "🎯 全球直连" },
+      {"action": "sniff"},
+      {"protocol": "dns", "action": "hijack-dns"},      { "clash_mode": "direct", "outbound": "🎯 全球直连" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "ip_is_private": true, "outbound": "🎯 全球直连" },
       { "rule_set": ["privateip", "private"], "outbound": "🎯 全球直连" },
