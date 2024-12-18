@@ -7,8 +7,8 @@
   
   "experimental": {
     "clash_api": {
-      "external_controller": "0.0.0.0:9095",
-      "external_ui": ".dashboard",
+      "external_controller": "0.0.0.0:9090",
+      "external_ui": "dashboard",
       "secret": "",
       "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
       "external_ui_download_detour": "🎯 全球直连",
@@ -16,7 +16,7 @@
     },    
   "cache_file": {
     "enabled": true,
-    "path": ".cache.db",
+    "path": "cache.db",
     "store_fakeip": true
     }
   },
@@ -25,7 +25,7 @@
   "fakeip": {"enabled": true, "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"},
    "servers": 
    [
-     {"tag": "dns_direct", "address": "223.5.5.5", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🎯 全球直连"},
+     {"tag": "dns_direct", "address": "223.5.5.5", "address_strategy": "ipv4_only", "strategy": "prefer_ipv4", "detour": "🎯 全球直连"},
      {"tag": "fakeip", "address": "fakeip"}
    ],
    "rules": 
@@ -43,7 +43,7 @@
     }
    ],
    "final": "dns_direct",
-   "strategy": "ipv4_only"
+   "strategy": "prefer_ipv4"
   },
 
 "inbounds": [
