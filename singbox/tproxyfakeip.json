@@ -31,8 +31,8 @@
    "rules": 
    [
      {"outbound": "any", "server": "dns_direct", "disable_cache": true},
-     {"clash_mode": "Direct", "server": "dns_direct"},
-     {"clash_mode": "Global", "server": "fakeip"},
+     {"clash_mode": "direct", "server": "dns_direct"},
+     {"clash_mode": "global", "server": "fakeip"},
      {"rule_set": "geosite-cn", "action": "route","server": "dns_direct"},
      {
       "query_type": [
