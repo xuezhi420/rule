@@ -8,7 +8,7 @@
   "experimental": {
     "clash_api": {
       "external_controller": "0.0.0.0:9090",
-      "external_ui": ".dashboard",
+      "external_ui": "/dashboard",
       "secret": "",
       "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
       "external_ui_download_detour": "🎯 全球直连",
@@ -17,58 +17,53 @@
   "cache_file": {
     "enabled": true,
     "path": "cache.db",
-    "store_fakeip": true
+    "store_fakeip": false
     }
   },
   
-  "dns": {
-  "fakeip": {"enabled": true, "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"},
+  "dns": 
+ {
    "servers": 
    [
-     {"tag": "dns_direct", "address": "223.5.5.5", "address_strategy": "ipv4_only", "strategy": "prefer_ipv4", "detour": "🎯 全球直连"},
-     {"tag": "fakeip", "address": "fakeip"}
+     {"tag": "dns_direct", "address": "223.5.5.5", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🎯 全球直连"},
+     {"tag": "dns_proxy", "address": "tls://8.8.8.8", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🚀 节点选择"}
    ],
    "rules": 
    [
      {"outbound": "any", "server": "dns_direct", "disable_cache": true},
-     {"clash_mode": "direct", "server": "dns_direct"},
-     {"clash_mode": "global", "server": "fakeip"},
+     {"clash_mode": "Direct", "server": "dns_direct"},
+     {"clash_mode": "Global", "server": "dns_proxy"},
      {"rule_set": "geosite-cn", "action": "route","server": "dns_direct"},
-     {
-      "query_type": [
-        "A",
-        "AAAA"
-      ],
-      "server": "fakeip"
-    }
+     {"rule_set": "geosite-geolocation-!cn", "server": "dns_proxy"}
    ],
-   "final": "dns_direct",
-   "strategy": "prefer_ipv4"
-  },
+   "final": "dns_proxy",
+   "strategy": "ipv4_only"
+},
  "inbounds": [
-    {
-      "type": "tun",
-      "address": "172.19.0.1/30",
-      "mtu": 9000,
-      "auto_route": true,
-      "sniff": true,
-      "stack": "system",
-      "platform": {
-        "http_proxy": {
-          "enabled": true,
-          "server": "127.0.0.1",
-          "server_port": 2080
-        }
+  {
+    "type": "tun",
+    "address": "172.19.0.1/30",
+    "mtu": 9000,
+    "auto_route": true,
+    "auto_redirect": true,
+    "strict_route": true,
+    "stack": "system",
+    "platform": {
+      "http_proxy": {
+        "enabled": true,
+        "server": "127.0.0.1",
+        "server_port": 2080
       }
-    },
-    {
-      "type": "mixed",
-      "listen": "127.0.0.1",
-      "listen_port": 2080,
-      "sniff": true,
-      "users": []
     }
-  ],  
+  },
+  {
+    "type": "mixed",
+    "listen": "127.0.0.1",
+    "listen_port": 2080,
+    "sniff": true,
+    "users": []
+  }
+],  
   
   "outbounds": [
     { "tag": "🚀 节点选择", "type": "selector", "outbounds": ["🇭🇰 香港自动", "🇹🇼 台湾自动", "🇸🇬 狮城自动", "🇯🇵 日本自动", "🇺🇲 美国自动", "✈️ 手动切换"] },
