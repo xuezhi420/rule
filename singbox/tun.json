@@ -23,7 +23,7 @@
   "dns": {
     "servers": [
       {"tag": "proxyDns", "address": "tls://8.8.8.8", "address_strategy": "ipv4_only", "detour": "🚀 节点选择"},
-      {"tag": "localDns", "address": "https://dns.alidns.com/dns-query", "address_resolver": "defaultDns", "address_strategy": "ipv4_only", "detour": "🎯 全球直连"},
+      {"tag": "localDns", "address": "https://dns.alidns.com/dns-query", "address_resolver": "defaultDns", "address_strategy": "prefer_ipv4", "detour": "🎯 全球直连"},
       {"tag": "defaultDns", "address": "223.5.5.5", "address_strategy": "ipv4_only", "detour": "🎯 全球直连"}
     ],
     "rules": [
@@ -40,7 +40,7 @@
   {
     "type": "tun",
     "tag": "tun-in",
-    "address": "172.19.0.1/30",
+    "address": [ "172.19.0.0/30", "fdfe:dcba:9876::0/126" ],
     "mtu": 9000,
     "auto_route": true,
     "auto_redirect": true,
