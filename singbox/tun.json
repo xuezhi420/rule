@@ -56,6 +56,7 @@
   },
   {
     "type": "mixed",
+    "tag": "mixed-in",
     "listen": "127.0.0.1",
     "listen_port": 2080,
     "sniff": true,
@@ -88,7 +89,7 @@
         "auto_detect_interface": true,
         "final": "🐟 漏网之鱼",
     "rules": [
-      {"inbound": "tun-in", "action": "sniff"},
+      {"inbound": ["tun-in", "mixed-in"], "action": "sniff"},
       {"protocol": "dns", "action": "hijack-dns"},
       {"clash_mode": "direct", "outbound": "🎯 全球直连"},
       { "clash_mode": "global", "outbound": "GLOBAL" },
