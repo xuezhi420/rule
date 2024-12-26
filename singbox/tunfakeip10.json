@@ -167,7 +167,8 @@
       { "clash_mode": "global", "outbound": "GLOBAL" },
       {
         "wifi_ssid": [
-          "ASUS_5G"
+          "ASUS_5G",
+          "ASUS420_5G"
         ], 
         "outbound": "direct"
       },
