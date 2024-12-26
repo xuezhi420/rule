@@ -161,12 +161,6 @@
       },
       {"clash_mode": "direct", "outbound": "direct"},
       { "clash_mode": "global", "outbound": "GLOBAL" },
-      {
-        "wifi_ssid": [
-          "ASUS_5G"
-        ], 
-        "outbound": "direct"
-      },
       { "rule_set": ["privateip", "private"], "outbound": "direct" },
       { "rule_set": "zhilian", "outbound": "direct" },
       { "rule_set": "geosite-github", "outbound": "🚀 节点选择" },
