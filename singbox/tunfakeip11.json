@@ -137,7 +137,7 @@
     { "tag": "🇭🇰 香港自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇭🇰|HK|hk|香港|港|HongKong"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 20 },
     { "tag": "🇸🇬 狮城自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇸🇬|新加坡|SG|SINGAPORE|Singapore"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 20 },
     { "tag": "🐟 漏网之鱼", "type": "selector", "outbounds": ["🚀 节点选择", "direct", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇯🇵 日本自动", "🇺🇲 美国自动", "✈️ 手动切换"] },
-    { "tag": "GLOBAL", "type": "selector", "outbounds": ["direct", "✈️ 手动切换", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇯🇵 日本自动", "🇺🇲 美国自动"] },
+    { "tag": "GLOBAL", "type": "selector", "outbounds": ["direct", "✈️ 手动切换", "🇭🇰 香港自动", "🇹🇼 台湾自动", "🇯🇵 日本自动", "🇸🇬 狮城自动", "🇺🇲 美国自动"] },
     { "tag": "direct", "type": "direct" }
   ],
   
