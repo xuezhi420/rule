@@ -1,4 +1,4 @@
-# 规则名称: 直连
+# 规则名称: 自用直连
 DOMAIN-SUFFIX,sciencedirect.com
 DOMAIN-SUFFIX,editorialmanager.com
 DOMAIN-SUFFIX,webofscience.com
