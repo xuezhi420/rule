@@ -146,7 +146,6 @@
         "final": "🐟 漏网之鱼",
     "rules": [
       {"inbound": ["tun-in", "mixed-in"], "action": "sniff"},
-      {"protocol": "dns", "action": "hijack-dns"},
       {
         "type": "logical",
         "mode": "or",
