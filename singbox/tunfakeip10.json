@@ -29,7 +29,7 @@
     "servers": [
       {
         "tag": "google",
-        "address": "tls://8.8.8.8"
+        "address": "tls://8.8.4.4"
       },
       {
         "tag": "local",
@@ -157,8 +157,7 @@
       },
       { "clash_mode": "direct", "outbound": "direct" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
-      { "rule_set": ["privateip", "private"], "outbound": "direct" },
-      { "rule_set": "zhilian", "outbound": "direct" },
+      { "rule_set": ["privateip", "private", "zhilian"], "outbound": "direct" },
       { "rule_set": "geosite-github", "outbound": "🚀 节点选择" },
       { "rule_set": "geosite-openai", "outbound": "🤖 OpenAI" },
       { "rule_set": "geosite-youtube", "outbound": "📹 YouTube" },
