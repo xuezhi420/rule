@@ -46,7 +46,9 @@
       "rules": [
         {
           "outbound": "any",
-          "server": "local"
+          "action": "route",
+          "server": "local",
+          "disable_cache": true
         },
         {
           "clash_mode": "direct",
@@ -59,19 +61,25 @@
           "server": "google"
         },
         {
+        "query_type": "HTTPS",
+        "action": "reject"
+        },
+        {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "action": "route",
+        "server": "fakeip",
+        "rewrite_ttl": 1
+        },
+        {
           "rule_set": "geosite-cn",
           "action": "route",
           "server": "local"
-        },
-        {
-          "query_type": [
-            "A",
-            "AAAA"
-          ],
-          "action": "route",
-          "server": "fakeip"
         }
       ],
+      "final": "google",
       "independent_cache": true,
       "strategy": "prefer_ipv4"
     },
