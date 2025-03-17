@@ -61,17 +61,17 @@
           "server": "google"
         },
         {
-        "query_type": "HTTPS",
-        "action": "reject"
+          "query_type": "HTTPS",
+          "action": "reject"
         },
         {
-        "query_type": [
-          "A",
-          "AAAA"
-        ],
-        "action": "route",
-        "server": "fakeip",
-        "rewrite_ttl": 1
+          "query_type": [
+            "A",
+            "AAAA"
+          ],
+          "action": "route",
+          "server": "fakeip",
+          "rewrite_ttl": 1
         },
         {
           "rule_set": "geosite-cn",
