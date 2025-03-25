@@ -24,7 +24,7 @@
       "servers": [
         {
           "tag": "google",
-          "type": "https",
+          "type": "tls",
           "server": "8.8.8.8",
           "detour": "🚀 节点选择"
         },
@@ -72,7 +72,8 @@
         }
       ],
       "final": "google",
-      "independent_cache": true
+      "independent_cache": true,
+      "strategy": "prefer_ipv4"
     },
  "inbounds": [
       {
