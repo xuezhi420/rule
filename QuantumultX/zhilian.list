@@ -1,1 +1,13 @@
+# 规则名称: zhilian
+# 规则统计: 10
 
+HOST-SUFFIX,sciencedirect.com,zhilian
+HOST-SUFFIX,editorialmanager.com,zhilian
+HOST-SUFFIX,webofscience.com,zhilian
+HOST-SUFFIX,webofknowledge.com,zhilian
+HOST-SUFFIX,access.clarivate.com,zhilian
+HOST-SUFFIX,pdf.sciencedirectassets.com,zhilian
+HOST-SUFFIX,mjl.clarivate.com,zhilian
+HOST-SUFFIX,jcr.clarivate.com,zhilian
+HOST-SUFFIX,cdn.digital-experience.clarivate.io,zhilian
+HOST,board.zash.run.place,zhilian
