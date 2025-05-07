@@ -138,7 +138,9 @@
         "auto_detect_interface": true,
         "final": "🐟 漏网之鱼",
     "rules": [
-      {"inbound": ["tun-in", "mixed-in"], "action": "sniff"},
+      {
+        "action": "sniff"
+      },
       {
         "type": "logical",
         "mode": "or",
