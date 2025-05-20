@@ -82,6 +82,7 @@
           "server": "fakeip"
         }
       ],
+      "final": "local",
       "independent_cache": true,
       "strategy": "prefer_ipv4"
     },
