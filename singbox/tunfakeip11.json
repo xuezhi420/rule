@@ -30,7 +30,7 @@
       "servers": [
         {
           "tag": "google",
-          "address": "tls://8.8.4.4"
+          "address": "tls://8.8.8.8"
         },
         {
           "tag": "local",
