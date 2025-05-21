@@ -133,16 +133,7 @@
         "action": "sniff"
       },
       {
-        "type": "logical",
-        "mode": "or",
-        "rules":[
-          {
-            "port":53
-          },
-          {
-            "protocol": "dns"
-          }
-        ],
+        "protocol": "dns", 
         "action": "hijack-dns"
       },
       { "clash_mode": "direct", "outbound": "direct" },
