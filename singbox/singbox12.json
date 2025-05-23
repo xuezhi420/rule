@@ -56,7 +56,7 @@
           "action": "reject"
         },
         {
-          "rule_set": "geosite-cn",
+          "rule_set": ["geosite-cn", "fakeip-filter"],
           "action": "route",
           "server": "local"
         },  
@@ -169,6 +169,7 @@
       { "tag": "privateip", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs", "download_detour": "🚀 节点选择" },
       { "tag": "private", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs", "download_detour": "🚀 节点选择" },
       { "tag": "zhilian", "type": "remote", "format": "source", "url": "https://raw.githubusercontent.com/xuezhi420/rule/main/zhilian.json", "download_detour": "🚀 节点选择" },
+      { "tag": "fakeip-filter", "type": "remote", "format": "binary", "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/fakeip-filter.srs", "download_detour": "🚀 节点选择" },
       { "tag": "geosite-geolocation-!cn", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "🚀 节点选择" },
       { "tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs", "download_detour": "🚀 节点选择" },
       { "tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "🚀 节点选择" }
