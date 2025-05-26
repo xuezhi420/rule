@@ -20,13 +20,13 @@
         "skydrive.wns.windows.com",
         "spoprod-a.akamaihd.net",
         "storage.live.com",
-	"hb.zhenyunpan.com",
         "storage.msn.com"
       ]
     },
     {  
       "domain": [
-        "board.zash.run.place"
+        "board.zash.run.place",
+	"hb.zhenyunpan.com"
       ]
     },
     {
