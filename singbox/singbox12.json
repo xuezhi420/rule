@@ -18,8 +18,7 @@
       "enabled": true,
       "store_fakeip": true
     }
-  },
-  
+  },  
   "dns": {
       "servers": [
         {
