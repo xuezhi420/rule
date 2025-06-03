@@ -51,10 +51,6 @@
           "server": "google"
         },
         {
-          "query_type": "HTTPS",
-          "action": "reject"
-        },
-        {
           "rule_set": ["geosite-cn", "fakeip-filter"],
           "action": "route",
           "server": "local"
