@@ -22,12 +22,6 @@
   "dns": {
       "servers": [
         {
-          "tag": "aliyun",
-          "type": "https",
-          "server": "dns.alidns.com",
-          "domain_resolver": "local"
-        },
-        {
           "tag": "google",
           "type": "tls",
           "server": "8.8.8.8",
@@ -59,7 +53,7 @@
         {
           "rule_set": ["geosite-cn", "fakeip-filter"],
           "action": "route",
-          "server": "aliyun"
+          "server": "local"
         },  
         {
           "query_type": [
