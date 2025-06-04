@@ -24,7 +24,8 @@
         {
           "tag": "aliyun",
           "type": "https",
-          "server": "dns.alidns.com"
+          "server": "dns.alidns.com",
+          "domain_resolver": "local"
         },
         {
           "tag": "google",
