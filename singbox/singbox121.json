@@ -22,10 +22,9 @@
   "dns": {
       "servers": [
         {
-        "tag": "aliyun",
-        "type": "https",
-        "server": "dns.alidns.com",
-        "domain_resolver": "local"
+          "tag": "aliyun",
+          "type": "https",
+          "server": "dns.alidns.com"
         },
         {
           "tag": "google",
