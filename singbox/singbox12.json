@@ -3,8 +3,7 @@
     "disabled": false,
     "level": "info",
     "timestamp": true
-  },
-  
+  }, 
   "experimental": {
     "clash_api": {
       "external_controller": "0.0.0.0:9090",
@@ -22,6 +21,12 @@
   "dns": {
       "servers": [
         {
+        "tag": "aliyun",
+        "type": "https",
+        "server": "dns.alidns.com",
+        "domain_resolver": "local"
+        },    
+        {
           "tag": "google",
           "type": "tls",
           "server": "8.8.8.8",
@@ -29,7 +34,7 @@
         },
         {
           "tag": "local",
-          "type": "https",
+          "type": "udp",
           "server": "223.5.5.5"
         },
         {
@@ -53,7 +58,7 @@
         {
           "rule_set": ["geosite-cn", "fakeip-filter"],
           "action": "route",
-          "server": "local"
+          "server": "aliyun"
         },  
         {
           "query_type": [
