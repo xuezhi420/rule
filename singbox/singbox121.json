@@ -29,9 +29,8 @@
         },
         {
           "tag": "local",
-          "type": "https",
-          "server": "223.5.5.5",
-          "detour": "🎯 直连"
+          "type": "udp",
+          "server": "223.5.5.5"
         },
         {
           "tag": "fakeip",
