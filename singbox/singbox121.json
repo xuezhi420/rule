@@ -140,7 +140,7 @@
       { "rule_set": "streaming", "action": "route", "outbound": "🎬 Streaming" },
       { "rule_set": ["geoip-apple", "geosite-apple"], "action": "route", "outbound": "🍎 Apple" },
       { "rule_set": "geosite-microsoft", "action": "route", "outbound": "🪟 Microsoft" },      
-      { "rule_set": "geosite-geolocation-!cn", "action": "route", "outbound": "🚀 节点选择" },
+      { "rule_set": "proxy", "action": "route", "outbound": "🚀 节点选择" },
       { "rule_set": ["geoip-cn", "geosite-cn"], "action": "route", "outbound": "🎯 直连" }
     ],
     
@@ -163,7 +163,7 @@
       { "tag": "private", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs", "download_detour": "🚀 节点选择" },
       { "tag": "zhilian", "type": "remote", "format": "source", "url": "https://raw.githubusercontent.com/xuezhi420/rule/main/zhilian.json", "download_detour": "🚀 节点选择" },
       { "tag": "fakeip-filter", "type": "remote", "format": "binary", "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/fakeip-filter.srs", "download_detour": "🚀 节点选择" },
-      { "tag": "geosite-geolocation-!cn", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "🚀 节点选择" },
+      { "tag": "proxy", "type": "remote", "format": "binary", "url": "https://github.com/Centralmatrix3/Matrix-io/raw/refs/heads/master/Sing-box/Ruleset/PROXY.srs", "download_detour": "🚀 节点选择" },
       { "tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs", "download_detour": "🚀 节点选择" },
       { "tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "🚀 节点选择" }
     ]
