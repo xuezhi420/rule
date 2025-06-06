@@ -22,13 +22,6 @@
   "dns": {
       "servers": [
         {
-          "type": "hosts",
-          "tag": "play",
-          "predefined": {
-            "services.googleapis.cn": "services.googleapis.com"
-          }
-        },
-        {
           "tag": "google",
           "type": "tls",
           "server": "8.8.8.8",
