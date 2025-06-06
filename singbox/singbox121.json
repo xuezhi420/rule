@@ -23,7 +23,7 @@
       "servers": [
         {
           "type": "hosts",
-          "tag": "hosts",
+          "tag": "play",
           "predefined": {
             "services.googleapis.cn": "services.googleapis.com"
           }
