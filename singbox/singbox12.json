@@ -47,9 +47,8 @@
           "type": "hosts",
           "tag": "hosts",
           "predefined": {
-            "dns.alidns.com": [
-              "223.5.5.5",
-              "223.6.6.6"
+            "services.googleapis.cn": [
+              "services.googleapis.com"
             ]
           }
         }
