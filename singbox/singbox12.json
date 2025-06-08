@@ -53,7 +53,21 @@
           "rule_set": ["geosite-cn", "fakeip-filter"],
           "action": "route",
           "server": "ali"
-        },  
+        },
+        {
+          "type": "logical",
+          "mode": "and",
+          "rules": [
+            {
+              "rule_set": "geosite-geolocation-!cn",
+              "invert": true
+            },
+            {
+              "rule_set": "geoip-cn"
+            }
+          ],
+          "server": "ali"
+        },
         {
           "query_type": [
             "A",
