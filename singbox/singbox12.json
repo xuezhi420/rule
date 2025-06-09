@@ -38,6 +38,16 @@
           "server": "223.5.5.5"
         },
         {
+          "tag": "hosts",
+          "type": "hosts",
+          "predefined": {
+            "services.googleapis.cn": [
+              "services.googleapis.com"
+            ]
+          }
+        },
+        
+        {
           "tag": "fakeip",
           "type": "fakeip",
           "inet4_range": "198.18.0.0/15",
