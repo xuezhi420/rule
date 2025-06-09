@@ -42,7 +42,7 @@
           "type": "hosts",
           "predefined": {
             "services.googleapis.cn": [
-              "services.googleapis.com"
+              "1.1.1.1"
             ]
           }
         },
