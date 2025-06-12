@@ -139,7 +139,7 @@
         "auto_detect_interface": true,
         "final": "🐟 漏网之鱼",
         "default_domain_resolver": {
-          "server": "local"
+          "server": "ali"
         },
     "rules": [
       {
