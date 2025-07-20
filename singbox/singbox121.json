@@ -172,7 +172,7 @@
       { "tag": "geoip-telegram", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs", "download_detour": "🚀 节点选择" },
       { "tag": "geosite-telegram", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/telegram.srs", "download_detour": "🚀 节点选择" },
       { "tag": "geosite-disney", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs", "download_detour": "🚀 节点选择" },      
-      { "tag": "streaming", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/refs/heads/master/Sing-box/Ruleset/Streaming.srs", "download_detour": "🚀 节点选择" },
+      { "tag": "streaming", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/refs/heads/master/Sing-box/Ruleset/GlobalMedia.srs", "download_detour": "🚀 节点选择" },
       { "tag": "geoip-netflix", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/netflix.srs", "download_detour": "🚀 节点选择" },
       { "tag": "geosite-netflix", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs", "download_detour": "🚀 节点选择" },
       { "tag": "geoip-apple", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs", "download_detour": "🚀 节点选择" },
