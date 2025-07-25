@@ -87,7 +87,7 @@
       "tag": "🤖 Ai",
       "outbounds": [
         "🚀 Main",
-        "✈️  Manual",
+        "✈️ Manual",
         "🇭🇰 HK",
         "🇹🇼 TW",
         "🇯🇵 JP",
@@ -100,7 +100,7 @@
       "tag": "📲 Telegram",
       "outbounds": [
         "🚀 Main",
-        "✈️  Manual",
+        "✈️ Manual",
         "🇭🇰 HK",
         "🇹🇼 TW",
         "🇯🇵 JP",
@@ -113,7 +113,7 @@
       "tag": "🍀 Google",
       "outbounds": [
         "🚀 Main",
-        "✈️  Manual",
+        "✈️ Manual",
         "🇭🇰 HK",
         "🇹🇼 TW",
         "🇯🇵 JP",
@@ -127,7 +127,7 @@
       "outbounds": [
         "direct",
         "🚀 Main",
-        "✈️  Manual",
+        "✈️ Manual",
         "🇭🇰 HK",
         "🇹🇼 TW",
         "🇯🇵 JP",
@@ -157,7 +157,7 @@
       "type": "selector",
       "tag": "🚀 Main",
       "outbounds": [
-        "✈️  Manual",
+        "✈️ Manual",
         "🇭🇰 HK",
         "🇹🇼 TW",
         "🇯🇵 JP",
@@ -167,7 +167,7 @@
     },
     {
       "type": "selector",
-      "tag": "✈️  Manual",
+      "tag": "✈️ Manual",
       "use_all_providers": true
     },
     {
