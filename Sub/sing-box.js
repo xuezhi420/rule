@@ -17,7 +17,10 @@ config.outbounds.push(...proxies)
 
 config.outbounds.map(i => {
   if (['✈️ 手动切换'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies))
+    i.outbounds.push(
+      ...getTags(proxies)
+        .filter(tag => !/shadow/i.test(tag))
+    )
   }
   if (['🇭🇰 香港自动'].includes(i.tag)) {
     i.outbounds.push(
