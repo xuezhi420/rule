@@ -19,13 +19,12 @@ config.outbounds.map(i => {
   if (['✈️ 手动切换'].includes(i.tag)) {
     i.outbounds.push(
       ...getTags(proxies)
-        .filter(tag => !/shadow/i.test(tag))
+        .filter(tag => !/官网|流量｜剩余/i.test(tag))
     )
   }
   if (['🇭🇰 香港自动'].includes(i.tag)) {
     i.outbounds.push(
       ...getTags(proxies, /港|hk|hongkong|kong kong|🇭🇰/i)
-        .filter(tag => !/shadow/i.test(tag))
     )
   }
   if (['🇨🇳 台湾自动'].includes(i.tag)) {
