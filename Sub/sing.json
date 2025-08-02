@@ -100,6 +100,7 @@
             ],
             "stack": "mixed",
             "auto_route": true,
+            "auto_redirect": true,
             "platform": {
                 "http_proxy": {
                     "enabled": true,
