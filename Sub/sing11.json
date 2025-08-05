@@ -327,6 +327,11 @@
                 "outbound": "GLOBAL"
             },
             {
+                "ip_is_private": true,
+                "action": "route",
+                "outbound": "🎯 直连"
+            },
+            {
                 "rule_set": [
                     "privateip",
                     "private",
