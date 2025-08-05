@@ -21,10 +21,9 @@
     "dns": {
         "servers": [
             {
-                "tag": "google",
-                "type": "tls",
-                "server": "8.8.8.8",
-                "detour": "🚀 节点选择"
+                "tag": "local",
+                "type": "udp",
+                "server": "223.5.5.5"
             },
             {
                 "tag": "ali",
@@ -33,9 +32,10 @@
                 "domain_resolver": "local"
             },
             {
-                "tag": "local",
-                "type": "udp",
-                "server": "223.5.5.5"
+                "tag": "google",
+                "type": "tls",
+                "server": "8.8.8.8",
+                "detour": "🚀 节点选择"
             },
             {
                 "tag": "fakeip",
@@ -87,7 +87,7 @@
                 "rewrite_ttl": 1
             }
         ],
-        "final": "google",
+        "final": "ali",
         "independent_cache": true,
         "strategy": "prefer_ipv4"
     },
