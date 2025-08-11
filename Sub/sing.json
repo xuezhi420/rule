@@ -21,27 +21,39 @@
     "dns": {
         "servers": [
             {
-                "tag": "local",
-                "type": "udp",
-                "server": "223.5.5.5"
-            },
-            {
                 "tag": "ali",
                 "type": "https",
                 "server": "dns.alidns.com",
-                "domain_resolver": "local"
+                "domain_resolver": "hosts"
             },
             {
                 "tag": "google",
-                "type": "tls",
-                "server": "8.8.8.8",
-                "detour": "🚀 节点选择"
+                "type": "https",
+                "server": "dns.google",
+                "detour": "🚀 节点选择",
+                "domain_resolver": "hosts"
             },
             {
                 "tag": "fakeip",
                 "type": "fakeip",
                 "inet4_range": "198.18.0.0/15",
                 "inet6_range": "fc00::/18"
+            },
+            {
+                "type": "hosts",
+                "tag": "hosts",
+                "predefined": {
+                    "dns.alidns.com": [
+                        "223.5.5.5",
+                        "223.6.6.6",
+                        "2400:3200::1",
+                        "2400:3200:baba::1"
+                    ],
+                    "dns.google": [
+                        "8.8.8.8",
+                        "8.8.4.4"
+                    ]
+                }
             }
         ],
         "rules": [
