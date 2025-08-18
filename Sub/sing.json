@@ -99,7 +99,7 @@
                 "rewrite_ttl": 1
             }
         ],
-        "final": "ali",
+        "final": "google",
         "independent_cache": true,
         "strategy": "prefer_ipv4"
     },
