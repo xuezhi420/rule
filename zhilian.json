@@ -8,9 +8,9 @@
         "webofscience.com",
         "webofknowledge.com",
         "access.clarivate.com",
-	"mjl.clarivate.com",
-	"pdf.sciencedirectassets.com",
-	"livefilestore.com",
+	    "mjl.clarivate.com",
+	    "pdf.sciencedirectassets.com",
+	    "livefilestore.com",
         "oneclient.sfx.ms",
         "onedrive.com",
         "onedrive.live.com",
@@ -26,16 +26,17 @@
     {  
       "domain": [
         "board.zash.run.place",
-	"clip.makima.online"
+	    "clip.makima.online"
       ]
     },
     {
       "domain_keyword": [
         "1drv",
-	"clarivate",
+	    "clarivate",
         "onedrive",
         "skydrive"
       ]
     }
   ]
 }
+
