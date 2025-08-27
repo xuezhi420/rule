@@ -377,25 +377,6 @@
                 "outbound": "GLOBAL"
             },
             {
-                "type": "logical",
-                "mode": "and",
-                "rules": [
-                    {
-                        "protocol": [
-                            "quic"
-                        ]
-                    },
-                    {
-                        "rule_set": [
-                            "geosite-cn",
-                            "geoip-cn"
-                        ],
-                        "invert": true
-                    }
-                ],
-                "outbound": "reject"
-            },
-            {
                 "ip_is_private": true,
                 "action": "route",
                 "outbound": "🎯 直连"
