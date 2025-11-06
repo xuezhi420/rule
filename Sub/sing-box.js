@@ -32,7 +32,7 @@ config.outbounds.map(i => {
     i.outbounds.push(...getTags(proxies, /日本|jp|japan|🇯🇵/i))
   }
   if (['🇸🇬 狮城自动'].includes(i.tag)) {
-    i.outbounds.push(...getTags(proxies, /^(?!.*(?:us)).*(新|sg|singapore|🇸🇬)/i))
+    i.outbounds.push(...getTags(proxies, /^(?!.*(?:us)).*(新加坡|sg|singapore|🇸🇬)/i))
   }
   if (['🇺🇲 美国自动'].includes(i.tag)) {
     i.outbounds.push(...getTags(proxies, /美|unitedstates|united states|🇺🇸/i))
