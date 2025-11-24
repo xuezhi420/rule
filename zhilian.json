@@ -16,6 +16,7 @@
         "onedrive.live.com",
         "photos.live.com",
         "sharepoint.com",
+		"ascelibrary.org",
         "sharepointonline.com",
         "skydrive.wns.windows.com",
         "spoprod-a.akamaihd.net",
@@ -34,9 +35,11 @@
         "1drv",
 	    "clarivate",
         "onedrive",
+		"ascelibrary",
         "skydrive"
       ]
     }
   ]
 }
+
 
