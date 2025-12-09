@@ -1,4 +1,4 @@
-#!name=途虎养车
+#!name=🚗途虎养车
 #!desc=途虎养车定时签到
 #!arguments=定时签到:30 7 * * *
 #!arguments-desc=定时签到：Cron表达式，默认每日 7:30 执行。
