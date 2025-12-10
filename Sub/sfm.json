@@ -9,8 +9,8 @@
             "external_controller": "0.0.0.0:9090",
             "external_ui": "dashboard",
             "secret": "",
-            "external_ui_download_url": "https://ghfast.top/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
-            "external_ui_download_detour": "🎯 直连",
+            "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
+            "external_ui_download_detour": "🚀 节点选择",
             "default_mode": "rule"
         },
         "cache_file": {
@@ -125,7 +125,8 @@
                 "🇸🇬 狮城自动",
                 "🇯🇵 日本自动",
                 "🇺🇲 美国自动",
-                "✈️ 手动切换"
+                "✈️ 手动切换",
+                "🎯 直连"
             ]
         },
         {
@@ -366,6 +367,24 @@
                 "action": "hijack-dns"
             },
             {
+              "type": "logical",
+              "mode": "and",
+              "rules": [
+                {
+                  "rule_set": [
+                    "geosite-geolocation-!cn"
+                    ]
+                },
+                {
+                  "protocol": [
+                    "quic"
+                  ]
+                }
+              ],
+              "action": "reject",
+              "method": "drop"
+            },
+            {
                 "clash_mode": "direct",
                 "action": "route",
                 "outbound": "🎯 直连"
@@ -596,7 +615,7 @@
                 "tag": "geosite-geolocation-!cn",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs",
+                "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/proxy.srs",
                 "download_detour": "🚀 节点选择"
             },
             {
