@@ -1,30 +1,30 @@
 # --- ScienceDirect & Elsevier ---
-host-suffix,sciencedirect.com,DIRECT
-host-suffix,pdf.sciencedirectassets.com,DIRECT
+DOMAIN-suffix,sciencedirect.com
+DOMAIN-suffix,pdf.sciencedirectassets.com
 
 # --- Clarivate / Web of Science ---
-host-suffix,editorialmanager.com,DIRECT
-host-suffix,webofscience.com,DIRECT
-host-suffix,webofknowledge.com,DIRECT
-host-suffix,access.clarivate.com,DIRECT
-host-suffix,mjl.clarivate.com,DIRECT
+DOMAIN-suffix,editorialmanager.com
+DOMAIN-suffix,webofscience.com
+DOMAIN-suffix,webofknowledge.com
+DOMAIN-suffix,access.clarivate.com
+DOMAIN-suffix,mjl.clarivate.com
 
 # --- Microsoft OneDrive / SharePoint / Office ---
-host-suffix,onedrive.com,DIRECT
-host-suffix,onedrive.live.com,DIRECT
-host-suffix,photos.live.com,DIRECT
-host-suffix,oneclient.sfx.ms,DIRECT
-host-suffix,livefilestore.com,DIRECT
-host-suffix,sharepoint.com,DIRECT
-host-suffix,sharepointonline.com,DIRECT
-host-suffix,storage.live.com,DIRECT
-host-suffix,storage.msn.com,DIRECT
-host-suffix,skydrive.wns.windows.com,DIRECT
-host-suffix,spoprod-a.akamaihd.net,DIRECT
+DOMAIN-suffix,onedrive.com
+DOMAIN-suffix,onedrive.live.com
+DOMAIN-suffix,photos.live.com
+DOMAIN-suffix,oneclient.sfx.ms
+DOMAIN-suffix,livefilestore.com
+DOMAIN-suffix,sharepoint.com
+DOMAIN-suffix,sharepointonline.com
+DOMAIN-suffix,storage.live.com
+DOMAIN-suffix,storage.msn.com
+DOMAIN-suffix,skydrive.wns.windows.com
+DOMAIN-suffix,spoprod-a.akamaihd.net
 
 # --- ASCE / Academic Publishers ---
-host-suffix,ascelibrary.org,DIRECT
+DOMAIN-suffix,ascelibrary.org
 
-# --- Others (Direct host matches) ---
-host,board.zash.run.place,DIRECT
-host,clip.makima.online,DIRECT
+# --- Others (Direct DOMAIN matches) ---
+DOMAIN,board.zash.run.place
+DOMAIN,clip.makima.online
