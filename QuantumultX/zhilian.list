@@ -1,13 +1,30 @@
 # 规则名称: zhilian
 # 规则统计: 10
 
-HOST-SUFFIX,sciencedirect.com,zhilian
-HOST-SUFFIX,editorialmanager.com,zhilian
-HOST-SUFFIX,webofscience.com,zhilian
-HOST-SUFFIX,webofknowledge.com,zhilian
-HOST-SUFFIX,access.clarivate.com,zhilian
-HOST-SUFFIX,pdf.sciencedirectassets.com,zhilian
-HOST-SUFFIX,mjl.clarivate.com,zhilian
-HOST-SUFFIX,jcr.clarivate.com,zhilian
-HOST-SUFFIX,cdn.digital-experience.clarivate.io,zhilian
-HOST,board.zash.run.place,zhilian
+host-suffix,sciencedirect.com,zhilian
+host-suffix,editorialmanager.com,zhilian
+host-suffix,webofscience.com,zhilian
+host-suffix,webofknowledge.com,zhilian
+host-suffix,access.clarivate.com,zhilian
+host-suffix,mjl.clarivate.com,zhilian
+host-suffix,pdf.sciencedirectassets.com,zhilian
+host-suffix,livefilestore.com,zhilian
+host-suffix,oneclient.sfx.ms,zhilian
+host-suffix,onedrive.com,zhilian
+host-suffix,onedrive.live.com,zhilian
+host-suffix,photos.live.com,zhilian
+host-suffix,sharepoint.com,zhilian
+host-suffix,ascelibrary.org,zhilian
+host-suffix,sharepointonline.com,zhilian
+host-suffix,skydrive.wns.windows.com,zhilian
+host-suffix,spoprod-a.akamaihd.net,zhilian
+host-suffix,storage.live.com,zhilian
+host-suffix,storage.msn.com,zhilian
+host,board.zash.run.place,zhilian
+host,clip.makima.online,zhilian
+host-keyword,1drv,zhilian
+host-keyword,clarivate,zhilian
+host-keyword,onedrive,zhilian
+host-keyword,ascelibrary,zhilian
+host-keyword,skydrive,zhilian
+
