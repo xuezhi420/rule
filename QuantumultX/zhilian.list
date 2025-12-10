@@ -1,29 +1,29 @@
 # --- ScienceDirect & Elsevier ---
-DOMAIN-suffix,sciencedirect.com
-DOMAIN-suffix,pdf.sciencedirectassets.com
+DOMAIN-SUFFIX,sciencedirect.com
+DOMAIN-SUFFIX,pdf.sciencedirectassets.com
 
 # --- Clarivate / Web of Science ---
-DOMAIN-suffix,editorialmanager.com
-DOMAIN-suffix,webofscience.com
-DOMAIN-suffix,webofknowledge.com
-DOMAIN-suffix,access.clarivate.com
-DOMAIN-suffix,mjl.clarivate.com
+DOMAIN-SUFFIX,editorialmanager.com
+DOMAIN-SUFFIX,webofscience.com
+DOMAIN-SUFFIX,webofknowledge.com
+DOMAIN-SUFFIX,access.clarivate.com
+DOMAIN-SUFFIX,mjl.clarivate.com
 
 # --- Microsoft OneDrive / SharePoint / Office ---
-DOMAIN-suffix,onedrive.com
-DOMAIN-suffix,onedrive.live.com
-DOMAIN-suffix,photos.live.com
-DOMAIN-suffix,oneclient.sfx.ms
-DOMAIN-suffix,livefilestore.com
-DOMAIN-suffix,sharepoint.com
-DOMAIN-suffix,sharepointonline.com
-DOMAIN-suffix,storage.live.com
-DOMAIN-suffix,storage.msn.com
-DOMAIN-suffix,skydrive.wns.windows.com
-DOMAIN-suffix,spoprod-a.akamaihd.net
+DOMAIN-SUFFIX,onedrive.com
+DOMAIN-SUFFIX,onedrive.live.com
+DOMAIN-SUFFIX,photos.live.com
+DOMAIN-SUFFIX,oneclient.sfx.ms
+DOMAIN-SUFFIX,livefilestore.com
+DOMAIN-SUFFIX,sharepoint.com
+DOMAIN-SUFFIX,sharepointonline.com
+DOMAIN-SUFFIX,storage.live.com
+DOMAIN-SUFFIX,storage.msn.com
+DOMAIN-SUFFIX,skydrive.wns.windows.com
+DOMAIN-SUFFIX,spoprod-a.akamaihd.net
 
 # --- ASCE / Academic Publishers ---
-DOMAIN-suffix,ascelibrary.org
+DOMAIN-SUFFIX,ascelibrary.org
 
 # --- Others (Direct DOMAIN matches) ---
 DOMAIN,board.zash.run.place
