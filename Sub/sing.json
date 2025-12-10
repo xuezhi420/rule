@@ -368,6 +368,24 @@
                 "action": "hijack-dns"
             },
             {
+              "type": "logical",
+              "mode": "and",
+              "rules": [
+                {
+                  "rule_set": [
+                    "geosite-geolocation-!cn"
+                    ]
+                },
+                {
+                  "protocol": [
+                    "quic"
+                  ]
+                }
+              ],
+              "action": "reject",
+              "method": "drop"
+            },
+            {
                 "clash_mode": "direct",
                 "action": "route",
                 "outbound": "🎯 直连"
