@@ -1,30 +1,30 @@
 # 规则名称: DIRECT
 # 规则统计: 
 
-host-suffix,sciencedirect.com,DIRECT
-host-suffix,editorialmanager.com,DIRECT
-host-suffix,webofscience.com,DIRECT
-host-suffix,webofknowledge.com,DIRECT
-host-suffix,access.clarivate.com,DIRECT
-host-suffix,mjl.clarivate.com,DIRECT
-host-suffix,pdf.sciencedirectassets.com,DIRECT
-host-suffix,livefilestore.com,DIRECT
-host-suffix,oneclient.sfx.ms,DIRECT
-host-suffix,onedrive.com,DIRECT
-host-suffix,onedrive.live.com,DIRECT
-host-suffix,photos.live.com,DIRECT
-host-suffix,sharepoint.com,DIRECT
-host-suffix,ascelibrary.org,DIRECT
-host-suffix,sharepointonline.com,DIRECT
-host-suffix,skydrive.wns.windows.com,DIRECT
-host-suffix,spoprod-a.akamaihd.net,DIRECT
-host-suffix,storage.live.com,DIRECT
-host-suffix,storage.msn.com,DIRECT
-host,board.zash.run.place,DIRECT
-host,clip.makima.online,DIRECT
-host-keyword,1drv,DIRECT
-host-keyword,clarivate,DIRECT
-host-keyword,onedrive,DIRECT
-host-keyword,ascelibrary,DIRECT
-host-keyword,skydrive,DIRECT
+host-suffix,sciencedirect.com
+host-suffix,editorialmanager.com
+host-suffix,webofscience.com
+host-suffix,webofknowledge.com
+host-suffix,access.clarivate.com
+host-suffix,mjl.clarivate.com
+host-suffix,pdf.sciencedirectassets.com
+host-suffix,livefilestore.com
+host-suffix,oneclient.sfx.ms
+host-suffix,onedrive.com
+host-suffix,onedrive.live.com
+host-suffix,photos.live.com
+host-suffix,sharepoint.com
+host-suffix,ascelibrary.org
+host-suffix,sharepointonline.com
+host-suffix,skydrive.wns.windows.com
+host-suffix,spoprod-a.akamaihd.net
+host-suffix,storage.live.com
+host-suffix,storage.msn.com
+host,board.zash.run.place
+host,clip.makima.online
+host-keyword,1drv
+host-keyword,clarivate
+host-keyword,onedrive
+host-keyword,ascelibrary
+host-keyword,skydrive
 
