@@ -1,30 +1,30 @@
-# 规则名称: zhilian
+# 规则名称: DIRECT
 # 规则统计: 
 
-host-suffix,sciencedirect.com,zhilian
-host-suffix,editorialmanager.com,zhilian
-host-suffix,webofscience.com,zhilian
-host-suffix,webofknowledge.com,zhilian
-host-suffix,access.clarivate.com,zhilian
-host-suffix,mjl.clarivate.com,zhilian
-host-suffix,pdf.sciencedirectassets.com,zhilian
-host-suffix,livefilestore.com,zhilian
-host-suffix,oneclient.sfx.ms,zhilian
-host-suffix,onedrive.com,zhilian
-host-suffix,onedrive.live.com,zhilian
-host-suffix,photos.live.com,zhilian
-host-suffix,sharepoint.com,zhilian
-host-suffix,ascelibrary.org,zhilian
-host-suffix,sharepointonline.com,zhilian
-host-suffix,skydrive.wns.windows.com,zhilian
-host-suffix,spoprod-a.akamaihd.net,zhilian
-host-suffix,storage.live.com,zhilian
-host-suffix,storage.msn.com,zhilian
-host,board.zash.run.place,zhilian
-host,clip.makima.online,zhilian
-host-keyword,1drv,zhilian
-host-keyword,clarivate,zhilian
-host-keyword,onedrive,zhilian
-host-keyword,ascelibrary,zhilian
-host-keyword,skydrive,zhilian
+host-suffix,sciencedirect.com,DIRECT
+host-suffix,editorialmanager.com,DIRECT
+host-suffix,webofscience.com,DIRECT
+host-suffix,webofknowledge.com,DIRECT
+host-suffix,access.clarivate.com,DIRECT
+host-suffix,mjl.clarivate.com,DIRECT
+host-suffix,pdf.sciencedirectassets.com,DIRECT
+host-suffix,livefilestore.com,DIRECT
+host-suffix,oneclient.sfx.ms,DIRECT
+host-suffix,onedrive.com,DIRECT
+host-suffix,onedrive.live.com,DIRECT
+host-suffix,photos.live.com,DIRECT
+host-suffix,sharepoint.com,DIRECT
+host-suffix,ascelibrary.org,DIRECT
+host-suffix,sharepointonline.com,DIRECT
+host-suffix,skydrive.wns.windows.com,DIRECT
+host-suffix,spoprod-a.akamaihd.net,DIRECT
+host-suffix,storage.live.com,DIRECT
+host-suffix,storage.msn.com,DIRECT
+host,board.zash.run.place,DIRECT
+host,clip.makima.online,DIRECT
+host-keyword,1drv,DIRECT
+host-keyword,clarivate,DIRECT
+host-keyword,onedrive,DIRECT
+host-keyword,ascelibrary,DIRECT
+host-keyword,skydrive,DIRECT
 
