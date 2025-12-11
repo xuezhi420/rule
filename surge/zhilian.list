@@ -1,14 +1,14 @@
 # 规则名称: 自用直连
-# 规则统计: 10
+# 规则统计: 12
 DOMAIN-SUFFIX,sciencedirect.com
 DOMAIN-SUFFIX,editorialmanager.com
 DOMAIN-SUFFIX,webofscience.com
 DOMAIN-SUFFIX,webofknowledge.com
 DOMAIN-SUFFIX,access.clarivate.com
-DOMAIN,pdf.sciencedirectassets.com
 DOMAIN-SUFFIX,mjl.clarivate.com
 DOMAIN-SUFFIX,jcr.clarivate.com
 DOMAIN-SUFFIX,cdn.digital-experience.clarivate.io
 DOMAIN-KEYWORD,clarivate
 DOMAIN,clip.makima.online
 DOMAIN,ascelibrary.org
+DOMAIN,pdf.sciencedirectassets.com
