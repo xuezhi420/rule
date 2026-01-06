@@ -22,7 +22,8 @@
         "spoprod-a.akamaihd.net",
         "storage.live.com",
         "storage.msn.com",
-	    "resourcemap.lol"
+	    "resourcemap.lol",
+		"api-huacloud.net"
       ]
     },
     {  
@@ -42,6 +43,7 @@
     }
   ]
 }
+
 
 
 
