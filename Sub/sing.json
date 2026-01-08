@@ -114,6 +114,12 @@
             "mtu": 9000,
             "auto_route": true,
             "auto_redirect": true
+        },
+        {
+            "type": "mixed",
+            "listen": "::",
+            "listen_port": 7890
+
         }
     ],
     "outbounds": [
