@@ -391,7 +391,7 @@
                 }
               ],
               "action": "reject",
-              "method": "drop"
+              "method": "default"
             },
             {
                 "clash_mode": "direct",
