@@ -119,7 +119,6 @@
             "type": "mixed",
             "listen": "::",
             "listen_port": 7890
-
         }
     ],
     "outbounds": [
@@ -246,8 +245,10 @@
                 "🇸🇬 狮城自动",
                 "🇯🇵 日本自动",
                 "🚀 节点选择",
-                "✈️ 手动切换"
-            ]
+                "✈️ 手动切换",
+                "🎯 直连"
+            ],
+            "default": "🎯 直连"
         },
         {
             "tag": "🪟 Microsoft",
@@ -376,22 +377,22 @@
                 "action": "hijack-dns"
             },
             {
-              "type": "logical",
-              "mode": "and",
-              "rules": [
-                {
-                  "rule_set": [
-                    "geosite-geolocation-!cn"
-                    ]
-                },
-                {
-                  "protocol": [
-                    "quic"
-                  ]
-                }
-              ],
-              "action": "reject",
-              "method": "default"
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "rule_set": [
+                            "geosite-geolocation-!cn"
+                        ]
+                    },
+                    {
+                        "protocol": [
+                            "quic"
+                        ]
+                    }
+                ],
+                "action": "reject",
+                "method": "default"
             },
             {
                 "clash_mode": "direct",
