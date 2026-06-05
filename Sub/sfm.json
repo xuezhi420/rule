@@ -113,6 +113,11 @@
             "stack": "mixed",
             "mtu": 9000,
             "auto_route": true
+        },
+        {
+            "type": "mixed",
+            "listen": "::",
+            "listen_port": 7890
         }
     ],
     "outbounds": [
@@ -147,19 +152,20 @@
                 "🇺🇲 美国自动",
                 "🚀 节点选择",
                 "✈️ 手动切换"
-            ]
+            ],
+            "default": "🇨🇳 台湾自动"
         },
         {
             "tag": "🤖 OpenAI",
             "type": "selector",
             "outbounds": [
-                "✈️ 手动切换",
-                "🚀 节点选择",
-                "🇭🇰 香港自动",
-                "🇨🇳 台湾自动",
-                "🇸🇬 狮城自动",
+                "🇺🇲 美国自动",
                 "🇯🇵 日本自动",
-                "🇺🇲 美国自动"
+                "🇸🇬 狮城自动",
+                "🇨🇳 台湾自动",
+                "🇭🇰 香港自动",
+                "✈️ 手动切换",
+                "🚀 节点选择"
             ]
         },
         {
@@ -212,7 +218,8 @@
                 "🇺🇲 美国自动",
                 "🚀 节点选择",
                 "✈️ 手动切换"
-            ]
+            ],
+            "default": "🇯🇵 日本自动"
         },
         {
             "tag": "🎬 Streaming",
@@ -225,6 +232,15 @@
                 "🇺🇲 美国自动",
                 "🚀 节点选择",
                 "✈️ 手动切换"
+            ],
+            "default": "🇯🇵 日本自动"
+        },
+        {
+            "tag": "🏠回家策略",
+            "type": "selector",
+            "outbounds": [
+                "🎯 直连",
+                "🏠Home_SS2022"
             ]
         },
         {
@@ -237,8 +253,10 @@
                 "🇸🇬 狮城自动",
                 "🇯🇵 日本自动",
                 "🚀 节点选择",
-                "✈️ 手动切换"
-            ]
+                "✈️ 手动切换",
+                "🎯 直连"
+            ],
+            "default": "🎯 直连"
         },
         {
             "tag": "🪟 Microsoft",
@@ -269,7 +287,7 @@
 
             ],
             "url": "http://www.gstatic.com/generate_204",
-            "interval": "10m",
+            "interval": "3m",
             "tolerance": 20
         },
         {
@@ -279,7 +297,7 @@
 
             ],
             "url": "http://www.gstatic.com/generate_204",
-            "interval": "10m",
+            "interval": "3m",
             "tolerance": 20
         },
         {
@@ -289,7 +307,7 @@
 
             ],
             "url": "http://www.gstatic.com/generate_204",
-            "interval": "10m",
+            "interval": "3m",
             "tolerance": 20
         },
         {
@@ -299,7 +317,7 @@
 
             ],
             "url": "http://www.gstatic.com/generate_204",
-            "interval": "10m",
+            "interval": "3m",
             "tolerance": 20
         },
         {
@@ -309,7 +327,7 @@
 
             ],
             "url": "http://www.gstatic.com/generate_204",
-            "interval": "10m",
+            "interval": "3m",
             "tolerance": 20
         },
         {
@@ -367,22 +385,22 @@
                 "action": "hijack-dns"
             },
             {
-              "type": "logical",
-              "mode": "and",
-              "rules": [
-                {
-                  "rule_set": [
-                    "geosite-geolocation-!cn"
-                    ]
-                },
-                {
-                  "protocol": [
-                    "quic"
-                  ]
-                }
-              ],
-              "action": "reject",
-              "method": "default"
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "rule_set": [
+                            "geosite-geolocation-!cn"
+                        ]
+                    },
+                    {
+                        "protocol": [
+                            "quic"
+                        ]
+                    }
+                ],
+                "action": "reject",
+                "method": "default"
             },
             {
                 "clash_mode": "direct",
@@ -393,6 +411,10 @@
                 "clash_mode": "global",
                 "action": "route",
                 "outbound": "GLOBAL"
+            },
+            {
+                "ip_cidr": "192.168.0.0/16",
+                "outbound": "🏠回家策略"
             },
             {
                 "ip_is_private": true,
