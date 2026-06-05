@@ -107,11 +107,11 @@
         {
             "type": "tun",
             "address": [
-                "172.19.0.0/30",
-                "fdfe:dcba:9876::0/126"
+                "172.19.0.1/30",
+                "fdfe:dcba:9876::1/126"
             ],
             "stack": "mixed",
-            "mtu": 9000,
+            "mtu": 1400,
             "auto_route": true
         },
         {
