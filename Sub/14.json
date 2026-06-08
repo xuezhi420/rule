@@ -10,7 +10,7 @@
             "external_ui": "dashboard",
             "secret": "",
             "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
-            "external_ui_http_client": "🚀 节点选择",
+            "external_ui_http_client": "proxy-client",
             "default_mode": "rule"
         },
         "cache_file": {
@@ -18,6 +18,12 @@
             "store_fakeip": true
         }
     },
+    "http_clients": [
+        {
+            "tag": "proxy-client",
+            "detour": "🚀 节点选择"
+        }
+    ],
     "dns": {
         "servers": [
             {
@@ -418,11 +424,6 @@
                 "outbound": "🏠回家策略"
             },
             {
-                "ip_is_private": true,
-                "action": "route",
-                "outbound": "🎯 直连"
-            },
-            {
                 "rule_set": [
                     "privateip",
                     "private",
@@ -512,190 +513,127 @@
                 "tag": "geosite-openai",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/ai.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/ai.srs"
             },
             {
                 "tag": "geosite-youtube",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs"
             },
             {
                 "tag": "geoip-google",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/google.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/google.srs"
             },
             {
                 "tag": "geosite-google",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs"
             },
             {
                 "tag": "geoip-telegram",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs"
             },
             {
                 "tag": "geosite-telegram",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/telegram.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/telegram.srs"
             },
             {
                 "tag": "geosite-paypal",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/paypal.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/paypal.srs"
             },
             {
                 "tag": "geosite-disney",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs"
             },
             {
                 "tag": "streaming",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/refs/heads/master/Sing-box/Ruleset/GlobalMedia.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/refs/heads/master/Sing-box/Ruleset/GlobalMedia.srs"
             },
             {
                 "tag": "geoip-netflix",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/netflix.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/netflix.srs"
             },
             {
                 "tag": "geosite-netflix",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs"
             },
             {
                 "tag": "geoip-apple",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs"
             },
             {
                 "tag": "geosite-apple",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs"
             },
             {
                 "tag": "geosite-microsoft",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/microsoft-cn.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/microsoft-cn.srs"
             },
             {
                 "tag": "privateip",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs"
             },
             {
                 "tag": "private",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs"
             },
             {
                 "tag": "zhilian",
                 "type": "remote",
                 "format": "source",
-                "url": "https://raw.githubusercontent.com/xuezhi420/rule/main/zhilian.json",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/xuezhi420/rule/main/zhilian.json"
             },
             {
                 "tag": "fakeip-filter",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/fakeip-filter.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/fakeip-filter.srs"
             },
             {
                 "tag": "geosite-geolocation-!cn",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/proxy.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/proxy.srs"
             },
             {
                 "tag": "geoip-cn",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs"
             },
             {
                 "tag": "geosite-cn",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs",
-                "http_client": {
-                    "detour": "🚀 节点选择"
-                }
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs"
             }
         ]
     }
