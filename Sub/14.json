@@ -10,7 +10,7 @@
             "external_ui": "dashboard",
             "secret": "",
             "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
-            "external_ui_download_detour": "🚀 节点选择",
+            "external_ui_http_client": "🚀 节点选择",
             "default_mode": "rule"
         },
         "cache_file": {
