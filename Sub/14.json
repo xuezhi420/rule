@@ -364,6 +364,7 @@
     "route": {
         "auto_detect_interface": true,
         "final": "🐟 漏网之鱼",
+        "default_http_client": "proxy-client"
         "default_domain_resolver": {
             "server": "ali"
         },
