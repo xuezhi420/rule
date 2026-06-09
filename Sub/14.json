@@ -74,11 +74,9 @@
                 "server": "google"
             },
             {
-                "rule_set": [
-                    "geosite-cn",
-                    "fakeip-filter"
-                ],
-                "action": "route",
+                "rule_set": "geosite-geolocation-!cn",
+                "invert": true,
+                "action": "evaluate",
                 "server": "ali"
             },
             {
@@ -86,21 +84,26 @@
                 "mode": "and",
                 "rules": [
                     {
-                        "rule_set": "geosite-geolocation-!cn",
-                        "invert": true
+                        "match_response": true
                     },
                     {
-                        "rule_set": "geoip-cn"
+                        "match_response": true,
+                        "ip_accept_any": true,
+                        "invert": true
                     }
                 ],
-                "server": "ali"
+                "action": "respond"
+            },
+            {
+                "match_response": true,
+                "rule_set": "geoip-cn",
+                "action": "respond"
             },
             {
                 "query_type": [
                     "A",
                     "AAAA"
                 ],
-                "action": "route",
                 "server": "fakeip",
                 "rewrite_ttl": 1
             }
@@ -411,12 +414,10 @@
             },
             {
                 "clash_mode": "direct",
-                "action": "route",
                 "outbound": "🎯 直连"
             },
             {
                 "clash_mode": "global",
-                "action": "route",
                 "outbound": "GLOBAL"
             },
             {
@@ -429,17 +430,14 @@
                     "private",
                     "zhilian"
                 ],
-                "action": "route",
                 "outbound": "🎯 直连"
             },
             {
                 "rule_set": "geosite-openai",
-                "action": "route",
                 "outbound": "🤖 OpenAI"
             },
             {
                 "rule_set": "geosite-youtube",
-                "action": "route",
                 "outbound": "📹 YouTube"
             },
             {
@@ -447,7 +445,6 @@
                     "geoip-google",
                     "geosite-google"
                 ],
-                "action": "route",
                 "outbound": "🍀 Google"
             },
             {
@@ -455,12 +452,10 @@
                     "geoip-telegram",
                     "geosite-telegram"
                 ],
-                "action": "route",
                 "outbound": "📲 Telegram"
             },
             {
                 "rule_set": "geosite-paypal",
-                "action": "route",
                 "outbound": "💰PayPal"
             },
             {
@@ -468,17 +463,14 @@
                     "geoip-netflix",
                     "geosite-netflix"
                 ],
-                "action": "route",
                 "outbound": "🎥 Netflix"
             },
             {
                 "rule_set": "geosite-disney",
-                "action": "route",
                 "outbound": "🎬 Disney"
             },
             {
                 "rule_set": "streaming",
-                "action": "route",
                 "outbound": "🎬 Streaming"
             },
             {
@@ -486,17 +478,14 @@
                     "geoip-apple",
                     "geosite-apple"
                 ],
-                "action": "route",
                 "outbound": "🍎 Apple"
             },
             {
                 "rule_set": "geosite-microsoft",
-                "action": "route",
                 "outbound": "🪟 Microsoft"
             },
             {
                 "rule_set": "geosite-geolocation-!cn",
-                "action": "route",
                 "outbound": "🚀 节点选择"
             },
             {
@@ -504,7 +493,6 @@
                     "geoip-cn",
                     "geosite-cn"
                 ],
-                "action": "route",
                 "outbound": "🎯 直连"
             }
         ],
