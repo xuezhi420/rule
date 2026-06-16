@@ -6,7 +6,7 @@
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/RQrun.png
 
 [URL Rewrite]
-^https:\/\/api\.rq\.run\/Api\/Spreadimg\/spreadimg_type_list$ _ reject
+^https:\/\/api\.rq\.run\/Api\/Spreadimg\/spreadimg_type_list$ - reject
 
 [MITM]
 hostname = api.rq.run
