@@ -5,7 +5,12 @@
             "tag": "sing-box-api",
             "listen": "0.0.0.0",
             "listen_port": 9999,
-            "access_control_allow_private_network": true
+            "access_control_allow_private_network": true,
+            "dashboard": {
+                "enabled": true,
+                "download_url": "https://github.com/SagerNet/sing-box-dashboard/archive/refs/heads/gh-pages.zip",
+                "http_client": "proxy-client"
+             }
         }
     ],
     "log": {
