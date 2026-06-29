@@ -10,8 +10,7 @@
                 "enabled": true,
                 "path": "ui",
                 "update_interval": "1d",
-                "download_url": "https://github.com/SagerNet/sing-box-dashboard/archive/refs/heads/gh-pages.zip",
-                "http_client": "proxy-client"
+                "download_url": "https://github.com/SagerNet/sing-box-dashboard/archive/refs/heads/gh-pages.zip"
              }
         }
     ],
@@ -387,7 +386,6 @@
     "route": {
         "auto_detect_interface": true,
         "final": "🐟 漏网之鱼",
-        "default_http_client": "proxy-client",
         "default_domain_resolver": {
             "server": "ali"
         },
