@@ -8,10 +8,9 @@
             "access_control_allow_private_network": true,
             "dashboard": {
                 "enabled": true,
-                "path": "./ui",
+                "path": "ui",
                 "update_interval": "1d",
-                "download_url": "https://github.com/SagerNet/sing-box-dashboard/archive/refs/heads/gh-pages.zip",
-                "http_client": "proxy-client"
+                "download_url": "https://github.com/SagerNet/sing-box-dashboard/archive/refs/heads/gh-pages.zip"
              }
         }
     ],
@@ -42,18 +41,18 @@
     "dns": {
         "servers": [
             {
-                "tag": "ali",
-                "type": "https",
-                "server": "dns.alidns.com",
-                "domain_resolver": "hosts"
-            },
-            {
                 "tag": "google",
                 "type": "https",
                 "server": "dns.google",
                 "detour": "🚀 节点选择",
                 "domain_resolver": "hosts"
             },
+            {
+                "tag": "ali",
+                "type": "https",
+                "server": "dns.alidns.com",
+                "domain_resolver": "hosts"
+            },        
             {
                 "tag": "fakeip",
                 "type": "fakeip",
@@ -123,7 +122,6 @@
                 "rewrite_ttl": 1
             }
         ],
-        "final": "google",
         "strategy": "prefer_ipv4"
     },
     "inbounds": [
@@ -387,7 +385,6 @@
     "route": {
         "auto_detect_interface": true,
         "final": "🐟 漏网之鱼",
-        "default_http_client": "proxy-client",
         "default_domain_resolver": {
             "server": "ali"
         },
