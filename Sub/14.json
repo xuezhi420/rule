@@ -437,6 +437,10 @@
                 "outbound": "🏠回家策略"
             },
             {
+                "ip_is_private": true,
+                "outbound": "🎯 直连"
+            },
+            {
                 "rule_set": [
                     "privateip",
                     "private",
