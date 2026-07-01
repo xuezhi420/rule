@@ -308,7 +308,7 @@
 
             ],
             "url": "https://clients1.google.com/generate_204",
-            "interval": "10m",
+            "interval": "5m",
             "tolerance": 20
         },
         {
@@ -318,7 +318,7 @@
 
             ],
             "url": "https://clients1.google.com/generate_204",
-            "interval": "10m",
+            "interval": "5m",
             "tolerance": 20
         },
         {
@@ -328,7 +328,7 @@
 
             ],
             "url": "https://clients1.google.com/generate_204",
-            "interval": "10m",
+            "interval": "5m",
             "tolerance": 20
         },
         {
@@ -338,7 +338,7 @@
 
             ],
             "url": "https://clients1.google.com/generate_204",
-            "interval": "10m",
+            "interval": "5m",
             "tolerance": 20
         },
         {
@@ -348,7 +348,7 @@
 
             ],
             "url": "https://clients1.google.com/generate_204",
-            "interval": "10m",
+            "interval": "5m",
             "tolerance": 20
         },
         {
