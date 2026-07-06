@@ -307,8 +307,8 @@
             "outbounds": [
 
             ],
-            "url": "https://clients1.google.com/generate_204",
-            "interval": "5m",
+            "url": "http://1.1.1.1/generate_204",
+            "interval": "3m",
             "tolerance": 20
         },
         {
@@ -317,8 +317,8 @@
             "outbounds": [
 
             ],
-            "url": "https://clients1.google.com/generate_204",
-            "interval": "5m",
+            "url": "http://1.1.1.1/generate_204",
+            "interval": "3m",
             "tolerance": 20
         },
         {
@@ -327,8 +327,8 @@
             "outbounds": [
 
             ],
-            "url": "https://clients1.google.com/generate_204",
-            "interval": "5m",
+            "url": "http://1.1.1.1/generate_204",
+            "interval": "3m",
             "tolerance": 20
         },
         {
@@ -337,8 +337,8 @@
             "outbounds": [
 
             ],
-            "url": "https://clients1.google.com/generate_204",
-            "interval": "5m",
+            "url": "http://1.1.1.1/generate_204",
+            "interval": "3m",
             "tolerance": 20
         },
         {
@@ -347,8 +347,8 @@
             "outbounds": [
 
             ],
-            "url": "https://clients1.google.com/generate_204",
-            "interval": "5m",
+            "url": "http://1.1.1.1/generate_204",
+            "interval": "3m",
             "tolerance": 20
         },
         {
