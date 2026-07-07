@@ -54,6 +54,11 @@
                 "domain_resolver": "hosts"
             },
             {
+                "type": "local",
+                "tag": "local",
+                "prefer_go": true
+            },
+            {
                 "tag": "fakeip",
                 "type": "fakeip",
                 "inet4_range": "198.18.0.0/15",
@@ -99,7 +104,7 @@
                 "rule_set": "geosite-geolocation-!cn",
                 "invert": true,
                 "action": "evaluate",
-                "server": "ali"
+                "server": "local"
             },
             {
                 "type": "logical",
