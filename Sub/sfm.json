@@ -88,6 +88,14 @@
                 "server": "google"
             },
             {
+                "query_type": [
+                    "A",
+                    "AAAA"
+                ],
+                "server": "fakeip",
+                "rewrite_ttl": 1
+            },
+            {
                 "rule_set": "geosite-geolocation-!cn",
                 "invert": true,
                 "action": "evaluate",
@@ -112,14 +120,6 @@
                 "match_response": true,
                 "rule_set": "geoip-cn",
                 "action": "respond"
-            },
-            {
-                "query_type": [
-                    "A",
-                    "AAAA"
-                ],
-                "server": "fakeip",
-                "rewrite_ttl": 1
             }
         ],
         "strategy": "prefer_ipv4"
