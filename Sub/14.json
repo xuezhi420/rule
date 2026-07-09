@@ -151,6 +151,7 @@
             "tag": "🚀 节点选择",
             "type": "selector",
             "outbounds": [
+                "🇺🇸dmit",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 狮城自动",
@@ -171,6 +172,7 @@
             "tag": "📲 Telegram",
             "type": "selector",
             "outbounds": [
+                "🇺🇸dmit",
                 "🇸🇬 狮城自动",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
@@ -185,6 +187,7 @@
             "tag": "🤖 OpenAI",
             "type": "selector",
             "outbounds": [
+                "🇺🇸dmit",
                 "🇺🇲 美国自动",
                 "🇯🇵 日本自动",
                 "🇸🇬 狮城自动",
@@ -198,6 +201,7 @@
             "tag": "🍀 Google",
             "type": "selector",
             "outbounds": [
+                "🇺🇸dmit",
                 "🇺🇲 美国自动",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
@@ -211,6 +215,7 @@
             "tag": "📹 YouTube",
             "type": "selector",
             "outbounds": [
+                "🇺🇸dmit",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 狮城自动",
@@ -224,6 +229,7 @@
             "tag": "🎬 Disney",
             "type": "selector",
             "outbounds": [
+                "🇺🇸dmit",
                 "🇺🇲 美国自动",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
@@ -237,6 +243,7 @@
             "tag": "🎥 Netflix",
             "type": "selector",
             "outbounds": [
+                "🇺🇸dmit",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 狮城自动",
@@ -251,6 +258,7 @@
             "tag": "🎬 Streaming",
             "type": "selector",
             "outbounds": [
+                "🇺🇸dmit",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇸🇬 狮城自动",
@@ -272,6 +280,7 @@
                 "🇯🇵 日本自动",
                 "🚀 节点选择",
                 "✈️ 手动切换",
+                "🇺🇸dmit",
                 "🎯 直连"
             ],
             "default": "🎯 直连"
@@ -292,6 +301,7 @@
             "type": "selector",
             "outbounds": [
                 "🎯 直连",
+                "🇺🇸dmit",
                 "🇭🇰 香港自动",
                 "🇨🇳 台湾自动",
                 "🇯🇵 日本自动",
