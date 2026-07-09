@@ -260,14 +260,6 @@
             "default": "🇯🇵 日本自动"
         },
         {
-            "tag": "🏠内网策略",
-            "type": "selector",
-            "outbounds": [
-                "🎯 直连",
-                "🏠Home_SS2022"
-            ]
-        },
-        {
             "tag": "💰PayPal",
             "type": "selector",
             "outbounds": [
@@ -433,10 +425,6 @@
             {
                 "clash_mode": "global",
                 "outbound": "GLOBAL"
-            },
-            {
-                "ip_cidr": "192.168.50.0/24",
-                "outbound": "🏠内网策略"
             },
             {
                 "ip_is_private": true,
