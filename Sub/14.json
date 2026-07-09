@@ -263,7 +263,7 @@
             "default": "🇯🇵 日本自动"
         },
         {
-            "tag": "🏠回家策略",
+            "tag": "🏠内网策略",
             "type": "selector",
             "outbounds": [
                 "🎯 直连",
@@ -439,7 +439,7 @@
             },
             {
                 "ip_cidr": "192.168.0.0/16",
-                "outbound": "🏠回家策略"
+                "outbound": "🏠内网策略"
             },
             {
                 "ip_is_private": true,
