@@ -93,14 +93,6 @@
                 "server": "google"
             },
             {
-                "query_type": [
-                    "A",
-                    "AAAA"
-                ],
-                "server": "fakeip",
-                "rewrite_ttl": 1
-            },
-            {
                 "rule_set": "geosite-geolocation-!cn",
                 "invert": true,
                 "action": "evaluate",
@@ -125,6 +117,13 @@
                 "match_response": true,
                 "rule_set": "geoip-cn",
                 "action": "respond"
+            },
+            {
+                "query_type": [
+                    "A",
+                    "AAAA"
+                ],
+                "server": "fakeip"
             }
         ],
         "strategy": "prefer_ipv4"
@@ -133,11 +132,10 @@
         {
             "type": "tun",
             "address": [
-                "172.19.0.1/30",
-                "fdfe:dcba:9876::1/126"
+                "172.19.0.0/30",
+                "fdfe:dcba:9876::0/126"
             ],
             "stack": "mixed",
-            "mtu": 9000,
             "auto_route": true
         },
         {
