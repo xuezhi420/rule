@@ -54,6 +54,12 @@
                 "domain_resolver": "hosts"
             },
             {
+                "tag": "qq",
+                "type": "https",
+                "server": "doh.pub",
+                "domain_resolver": "hosts"
+            },
+            {
                 "type": "local",
                 "tag": "local",
                 "prefer_go": true
@@ -73,6 +79,11 @@
                         "223.6.6.6",
                         "2400:3200::1",
                         "2400:3200:baba::1"
+                    ],
+                    "doh.pub": [
+                        "119.29.29.29",
+                        "120.53.53.53",
+                        "2402:4e00::"
                     ],
                     "dns.google": [
                         "8.8.8.8",
@@ -96,27 +107,27 @@
                 "rule_set": "geosite-geolocation-!cn",
                 "invert": true,
                 "action": "evaluate",
+                "tag": "alidoq",
                 "server": "ali"
             },
             {
-                "type": "logical",
-                "mode": "and",
-                "rules": [
-                    {
-                        "match_response": true
-                    },
-                    {
-                        "match_response": true,
-                        "ip_accept_any": true,
-                        "invert": true
-                    }
-                ],
-                "action": "respond"
+                "rule_set": "geosite-geolocation-!cn",
+                "invert": true,
+                "action": "evaluate",
+                "tag": "dnspod",
+                "server": "qq"
             },
             {
-                "match_response": true,
+                "match_response": "alidoq",
                 "rule_set": "geoip-cn",
-                "action": "respond"
+                "action": "respond",
+                "race": true
+            },
+            {
+                "match_response": "dnspod",
+                "rule_set": "geoip-cn",
+                "action": "respond",
+                "race": true
             },
             {
                 "query_type": [
