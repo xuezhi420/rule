@@ -149,6 +149,7 @@
     "inbounds": [
         {
             "type": "tun",
+            "tag": "tun-in",
             "address": [
                 "172.19.0.1/30",
                 "fdfe:dcba:9876::1/126"
@@ -420,6 +421,24 @@
         },
         "rules": [
             {
+                "ip_is_private": true,
+                "preferred_by": "bridge",
+                "outbound": "bridge"
+            },
+            {
+                "network": "icmp",
+                "preferred_by": "bridge",
+                "outbound": "bridge"
+            },
+            {
+                "rule_set": [
+                    "geoip-cn"
+                ],
+                "preferred_by": "bridge",
+                "outbound": "bridge"
+            },
+            {
+                "inbounds": "tun-in",
                 "action": "sniff"
             },
             {
@@ -463,18 +482,9 @@
             },
             {
                 "ip_is_private": true,
-                "preferred_by": "bridge",
-                "outbound": "bridge"
-            },
-            {
-                "ip_is_private": true,
                 "outbound": "🎯 直连"
             },
-            {
-                "network": "icmp",
-                "preferred_by":"bridge",
-                "outbound": "bridge"
-            },
+            
             {
                 "rule_set": [
                     "privateip",
@@ -538,13 +548,6 @@
             {
                 "rule_set": "geosite-geolocation-!cn",
                 "outbound": "🚀 节点选择"
-            },
-            {
-                "rule_set": [
-                    "geoip-cn"
-                ],
-                "preferred_by": "bridge",
-                "outbound": "bridge"
             },
             {
                 "rule_set": [
