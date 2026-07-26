@@ -104,6 +104,13 @@
                 "server": "google"
             },
             {
+                "rule_set": [
+                    "fakeip-filter",
+                    "private"
+                ],
+                "server": "local"
+            },
+            {
                 "rule_set": "geosite-geolocation-!cn",
                 "invert": true,
                 "action": "evaluate",
@@ -625,6 +632,12 @@
                 "type": "remote",
                 "format": "source",
                 "url": "https://raw.githubusercontent.com/xuezhi420/rule/main/zhilian.json"
+            },
+            {
+                "tag": "fakeip-filter",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/fakeip-filter.srs"
             },
             {
                 "tag": "geosite-geolocation-!cn",
