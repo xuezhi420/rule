@@ -104,6 +104,13 @@
                 "server": "google"
             },
             {
+                "rule_set": [
+                    "fakeip-filter",
+                    "private"
+                ],
+                "server": "local"
+            },
+            {
                 "rule_set": "geosite-geolocation-!cn",
                 "invert": true,
                 "action": "evaluate",
@@ -397,6 +404,10 @@
             ]
         },
         {
+            "tag": "bridge",
+            "type": "bridge"
+        }.
+        {
             "tag": "🎯 直连",
             "type": "direct"
         }
@@ -452,7 +463,17 @@
             },
             {
                 "ip_is_private": true,
+                "preferred_by": "bridge",
+                "outbound": "bridge"
+            },
+            {
+                "ip_is_private": true,
                 "outbound": "🎯 直连"
+            },
+            {
+                "network": "icmp",
+                "preferred_by":"bridge",
+                "outbound": "bridge"
             },
             {
                 "rule_set": [
@@ -520,7 +541,13 @@
             },
             {
                 "rule_set": [
-                    "geoip-cn",
+                    "geoip-cn"
+                ],
+                "preferred_by": "bridge",
+                "outbound": "bridge"
+            },
+            {
+                "rule_set": [
                     "geosite-cn"
                 ],
                 "outbound": "🎯 直连"
@@ -628,6 +655,12 @@
                 "type": "remote",
                 "format": "source",
                 "url": "https://raw.githubusercontent.com/xuezhi420/rule/main/zhilian.json"
+            },
+            {
+                "tag": "fakeip-filter",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/fakeip-filter.srs"
             },
             {
                 "tag": "geosite-geolocation-!cn",
