@@ -438,7 +438,7 @@
                 "outbound": "bridge"
             },
             {
-                "inbounds": "tun-in",
+                "inbound": "tun-in",
                 "action": "sniff"
             },
             {
@@ -551,7 +551,8 @@
             },
             {
                 "rule_set": [
-                    "geosite-cn"
+                    "geosite-cn",
+                    "geoip-cn"
                 ],
                 "outbound": "🎯 直连"
             }
