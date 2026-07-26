@@ -406,7 +406,7 @@
         {
             "tag": "bridge",
             "type": "bridge"
-        }.
+        },
         {
             "tag": "🎯 直连",
             "type": "direct"
