@@ -60,11 +60,6 @@
                 "domain_resolver": "hosts"
             },
             {
-                "type": "local",
-                "tag": "local",
-                "prefer_go": true
-            },
-            {
                 "tag": "fakeip",
                 "type": "fakeip",
                 "inet4_range": "198.18.0.0/15",
@@ -102,13 +97,6 @@
                 "clash_mode": "global",
                 "action": "route",
                 "server": "google"
-            },
-            {
-                "rule_set": [
-                    "fakeip-filter",
-                    "private"
-                ],
-                "server": "local"
             },
             {
                 "rule_set": "geosite-geolocation-!cn",
