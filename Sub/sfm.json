@@ -571,7 +571,7 @@
                 "tag": "streaming",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/refs/heads/master/Sing-box/Ruleset/GlobalMedia.srs"
+                "url": "https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/refs/heads/master/Ruleset/Sing-box/GlobalMedia.srs"
             },
             {
                 "tag": "geoip-netflix",
