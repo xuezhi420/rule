@@ -391,10 +391,6 @@
             ]
         },
         {
-            "tag": "bridge",
-            "type": "bridge"
-        },
-        {
             "tag": "🎯 直连",
             "type": "direct"
         }
@@ -406,23 +402,6 @@
             "server": "ali"
         },
         "rules": [
-            {
-                "ip_is_private": true,
-                "preferred_by": "bridge",
-                "outbound": "bridge"
-            },
-            {
-                "network": "icmp",
-                "preferred_by": "bridge",
-                "outbound": "bridge"
-            },
-            {
-                "rule_set": [
-                    "geoip-cn"
-                ],
-                "preferred_by": "bridge",
-                "outbound": "bridge"
-            },
             {
                 "action": "sniff"
             },
