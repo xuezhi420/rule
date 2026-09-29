@@ -1,9 +1,10 @@
 {
+    "$schema": "https://sing-box.sagernet.org/schema.json",
     "services": [
         {
             "type": "api",
             "tag": "sing-box-api",
-            "listen": "127.0.0.1",
+            "listen": "0.0.0.0",
             "listen_port": 9999,
             "access_control_allow_private_network": true,
             "dashboard": {
@@ -19,9 +20,12 @@
         "level": "info",
         "timestamp": true
     },
+    "certificate": {
+        "store": "chrome"
+    },
     "experimental": {
         "clash_api": {
-            "external_controller": "127.0.0.1:9090",
+            "external_controller": "0.0.0.0:9090",
             "external_ui": "dashboard",
             "secret": "",
             "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/download/v3.22.0/dist.zip",
@@ -88,7 +92,8 @@
             }
         ],
         "rules": [
-            {
+            {"query_type": ["HTTPS", "SVCB"], "action": "reject"},
+	        {
                 "clash_mode": "direct",
                 "action": "route",
                 "server": "ali"
@@ -138,13 +143,16 @@
         {
             "type": "tun",
             "address": [
-                "172.19.0.0/30",
-                "fdfe:dcba:9876::0/126"
+                "172.19.0.1/30",
+                "fdfe:dcba:9876::1/126"
             ],
+            "stack": "mixed",
+            "mtu": 9000,
             "auto_route": true
         },
         {
-            "type": "mixed",
+            "tag": "mixed-in",
+			"type": "mixed",
             "listen": "::",
             "listen_port": 7890
         }
@@ -225,6 +233,19 @@
                 "🇯🇵 日本自动",
                 "🇺🇲 美国自动",
                 "🚀 节点选择",
+                "✈️ 手动切换"
+            ]
+        },
+		{
+            "tag": "🚗 Github",
+            "type": "selector",
+            "outbounds": [
+                "🇺🇸dmit",
+                "🇭🇰 香港自动",
+                "🇨🇳 台湾自动",
+                "🇸🇬 狮城自动",
+                "🇯🇵 日本自动",
+                "🇺🇲 美国自动",
                 "✈️ 手动切换"
             ]
         },
@@ -365,6 +386,7 @@
             "tag": "🐟 漏网之鱼",
             "type": "selector",
             "outbounds": [
+                "🇺🇸dmit",
                 "🚀 节点选择",
                 "✈️ 手动切换",
                 "🇭🇰 香港自动",
@@ -416,6 +438,10 @@
                 "action": "hijack-dns"
             },
             {
+                "ip_is_private": true,
+                "outbound": "🎯 直连"
+            },
+            {
                 "type": "logical",
                 "mode": "and",
                 "rules": [
@@ -433,6 +459,8 @@
                 "action": "reject",
                 "method": "default"
             },
+            {"network": "icmp", "action": "resolve"},
+            {"network": "icmp", "outbound": "🎯 直连"},
             {
                 "clash_mode": "direct",
                 "outbound": "🎯 直连"
@@ -440,21 +468,16 @@
             {
                 "clash_mode": "global",
                 "outbound": "GLOBAL"
-            },
-            {
-                "ip_is_private": true,
-                "outbound": "🎯 直连"
-            },
+            },   
             {
                 "rule_set": [
-                    "privateip",
-                    "private",
+                    "geosite-private",
                     "zhilian"
                 ],
                 "outbound": "🎯 直连"
             },
             {
-                "rule_set": "geosite-openai",
+                "rule_set": "geosite-category-ai-!cn",
                 "outbound": "🤖 OpenAI"
             },
             {
@@ -462,12 +485,12 @@
                 "outbound": "📹 YouTube"
             },
             {
-                "rule_set": [
-                    "geoip-google",
-                    "geosite-google"
-                ],
+                "rule_set": "geosite-google",
                 "outbound": "🍀 Google"
             },
+			{   "rule_set": "geosite-github",
+				"outbound": "🚗 Github"
+			},
             {
                 "rule_set": [
                     "geoip-telegram",
@@ -480,10 +503,7 @@
                 "outbound": "💰PayPal"
             },
             {
-                "rule_set": [
-                    "geoip-netflix",
-                    "geosite-netflix"
-                ],
+                "rule_set": "geosite-netflix",
                 "outbound": "🎥 Netflix"
             },
             {
@@ -496,123 +516,41 @@
             },
             {
                 "rule_set": [
-                    "geoip-apple",
-                    "geosite-apple"
+                    "geosite-apple",
+                    "geosite-apple@cn"
                 ],
                 "outbound": "🍎 Apple"
             },
             {
-                "rule_set": "geosite-microsoft",
+                "rule_set": [
+                    "geosite-microsoft",
+                    "geosite-microsoft@cn"
+                ],
                 "outbound": "🪟 Microsoft"
             },
             {
                 "rule_set": "geosite-geolocation-!cn",
                 "outbound": "🚀 节点选择"
             },
+			{   "inbound": "mixed-in",
+				"action": "resolve"
+			},
             {
                 "rule_set": [
-                    "geoip-cn",
-                    "geosite-cn"
+                    "geosite-cn",
+                    "geoip-cn"
                 ],
                 "outbound": "🎯 直连"
             }
         ],
         "rule_set": [
-            {
-                "tag": "geosite-openai",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/ai.srs"
-            },
-            {
-                "tag": "geosite-youtube",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs"
-            },
-            {
-                "tag": "geoip-google",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/google.srs"
-            },
-            {
-                "tag": "geosite-google",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs"
-            },
-            {
-                "tag": "geoip-telegram",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs"
-            },
-            {
-                "tag": "geosite-telegram",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/telegram.srs"
-            },
-            {
-                "tag": "geosite-paypal",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/paypal.srs"
-            },
-            {
-                "tag": "geosite-disney",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs"
-            },
+	          {"tag": ["geosite-category-ai-!cn", "geosite-github", "geosite-youtube", "geosite-google", "geosite-disney", "geosite-microsoft", "geosite-microsoft@cn", "geosite-apple", "geosite-apple@cn", "geosite-telegram", "geosite-netflix", "geosite-paypal", "geosite-geolocation-!cn", "geosite-private", "geosite-cn"], "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/{tag}.srs"},
+            {"tag": "geoip-telegram", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs"},
             {
                 "tag": "streaming",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/refs/heads/master/Ruleset/Sing-box/GlobalMedia.srs"
-            },
-            {
-                "tag": "geoip-netflix",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/netflix.srs"
-            },
-            {
-                "tag": "geosite-netflix",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs"
-            },
-            {
-                "tag": "geoip-apple",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs"
-            },
-            {
-                "tag": "geosite-apple",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs"
-            },
-            {
-                "tag": "geosite-microsoft",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/microsoft-cn.srs"
-            },
-            {
-                "tag": "privateip",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs"
-            },
-            {
-                "tag": "private",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs"
             },
             {
                 "tag": "zhilian",
@@ -621,29 +559,11 @@
                 "url": "https://raw.githubusercontent.com/xuezhi420/rule/main/zhilian.json"
             },
             {
-                "tag": "fakeip-filter",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/fakeip-filter.srs"
-            },
-            {
-                "tag": "geosite-geolocation-!cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/proxy.srs"
-            },
-            {
                 "tag": "geoip-cn",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs"
-            },
-            {
-                "tag": "geosite-cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs"
-            }
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
+            } 
         ]
     }
 }
