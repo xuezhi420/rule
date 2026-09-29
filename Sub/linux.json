@@ -234,6 +234,19 @@
                 "✈️ 手动切换"
             ]
         },
+		{
+            "tag": "🚗 Github",
+            "type": "selector",
+            "outbounds": [
+                "🇺🇸dmit",
+                "🇭🇰 香港自动",
+                "🇨🇳 台湾自动",
+                "🇸🇬 狮城自动",
+                "🇯🇵 日本自动",
+                "🇺🇲 美国自动",
+                "✈️ 手动切换"
+            ]
+        },
         {
             "tag": "🎬 Disney",
             "type": "selector",
@@ -474,6 +487,9 @@
                 "rule_set": "geosite-google",
                 "outbound": "🍀 Google"
             },
+			{   "rule_set": "geosite-github",
+				"outbound": "🚗 Github"
+			},
             {
                 "rule_set": [
                     "geoip-telegram",
@@ -527,7 +543,7 @@
             }
         ],
         "rule_set": [
-	          {"tag": ["geosite-category-ai-!cn", "geosite-youtube", "geosite-google", "geosite-disney", "geosite-microsoft", "geosite-microsoft@cn", "geosite-apple", "geosite-apple@cn", "geosite-telegram", "geosite-netflix", "geosite-paypal", "geosite-geolocation-!cn", "geosite-private", "geosite-cn"], "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/{tag}.srs"},
+	          {"tag": ["geosite-category-ai-!cn", "geosite-github", "geosite-youtube", "geosite-google", "geosite-disney", "geosite-microsoft", "geosite-microsoft@cn", "geosite-apple", "geosite-apple@cn", "geosite-telegram", "geosite-netflix", "geosite-paypal", "geosite-geolocation-!cn", "geosite-private", "geosite-cn"], "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/{tag}.srs"},
             {"tag": "geoip-telegram", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs"},
             {
                 "tag": "streaming",
