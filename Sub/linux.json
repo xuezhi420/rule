@@ -90,7 +90,7 @@
         ],
         "rules": [
             {"query_type": ["HTTPS", "SVCB"], "action": "reject"},
-	    {
+	        {
                 "clash_mode": "direct",
                 "action": "route",
                 "server": "ali"
